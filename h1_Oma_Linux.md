@@ -15,7 +15,11 @@ Lisäksi on hyvä muistaa muutamia yleissääntöjä: muista asianmukaiset lähd
 
 ## a) Asenna Linux virtuaalikoneeseen. (Tee raporttia varten uusi virtuaalikone, vaikka olisit asentanut sen aiemmin)
 
-Tässä tehtävässä käytin asennuksen apuna muistiinpanojani viime keskiviikon Linux-palvelimet-kurssin aloitusluennosta Johanna Heinosen osiosta sekä Johannan GitHubiin tekemää sivua (linkki: https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-20082025.md). Lisäksi asennusta varten kysyin joitain asioita myös ChatGPT:ltä.
+Asennuksen kaikkine vaiheineen, jotka ohjeessa on tästä eteenpäin kuvattu, tein kotonani omalla kannettavalla tietokoneellani:
+- Lenovo Ideapad 3 15IAU7 I5 15,6"
+- Microsoft Windows 11 Home 
+
+Tässä tehtävässä käytin asennuksen apuna muistiinpanojani viime keskiviikon Linux-palvelimet-kurssin aloitusluennosta Johanna Heinosen osiosta sekä Johannan GitHubiin tekemää sivua (linkki: https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-20082025.md). Lisäksi asennusta varten kysyin joitain asioita myös ChatGPT:ltä antaen kaikki kehotteet suomeksi.
 
 ### VirtualBoxin asennus
 
