@@ -41,56 +41,116 @@ Valitettavasti en huomannut ottaa tästä osiosta kuvakaappauksia tai tehdä mui
 Kuvan lähde: https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-20082025.md
 
 3. Debian aukesi ja kokeilin klikkailla eri valikoita, avasin komentokehotteen ja avasin nettiselaimen.
-4. Komentokehote ei ymmärtänyt ääkkösiä ja monet erikoismerkitkin antoivat eri merkkejä kuin olisi pitänyt. Yritin ensin muuttaa näppäimistön asetukset suomeksi valitsemalla Applications > Settings > Keyboard > Layout-välilehti, poistamalla "English" ja lisäämällä "Finnish" keyboard layoutin. Tämä toki muutti näppiksen suomeksi, mutta asetus ei pysynyt virtuaalikoneen buutin myötä vaan palasi lähtötilanteeseen. Seuraavaksi kokeilin näppäimistöasetusten muuttamista ChatGPT:n ohjeen mukaan:
+4. Komentokehote ei ymmärtänyt ääkkösiä ja monet erikoismerkitkin antoivat eri merkkejä kuin olisi pitänyt. Yritin ensin muuttaa näppäimistön asetukset suomeksi valitsemalla Applications > Settings > Keyboard > Layout-välilehti, poistamalla "English" ja lisäämällä "Finnish" keyboard layoutin. Tämä toki muutti näppiksen suomeksi, mutta asetus ei pysynyt virtuaalikoneen buutin myötä vaan palasi lähtötilanteeseen.
+
+Seuraavaksi kokeilin näppäimistöasetusten muuttamista ChatGPT:n ohjeen mukaan:
 
 > Vaihe 1: Suorita komento
 > Avaa terminaali ja kirjoita:
-
+> 
 > sudo dpkg-reconfigure keyboard-configuration
-
+> 
 > Paina Enter.
 > Sinulta pyydetään salasanaa, kirjoita se ja paina Enter.
-
+> 
 > Vaihe 2: Valitse näppäimistömalli
-
+> 
 > Näyttöön tulee lista malleista.
 > Liiku nuolinäppäimillä (↑ ja ↓) kohtaan:
 > Generic 105-key (Intl) PC
 > Paina Enter.
-
+> 
 > Vaihe 3: Valitse näppäimistön asettelu
-
+> 
 > Seuraavaksi tulee lista kielistä/layouteista.
 > Liiku nuolinäppäimillä kohtaan:
 > Finnish
 > Paina Enter.
-
+> 
 > Vaihe 4: Other options
-
+> 
 > Seuraavat kysymykset ovat yleensä oletusarvoja (esim. “Use Control+Alt+Backspace to terminate the X server?”).
 > Jos haluat jättää oletuksiksi, paina Enter jokaisessa.
-
+> 
 > Vaihe 5: Tallenna asetukset
-
+> 
 > Ohjelma tallentaa asetukset automaattisesti, kun olet käynyt läpi kaikki valinnat.
 > Ei siis tarvita erillistä “Save”-painiketta – Enter viimeisessä valikossa riittää.
-
+> 
 > Vaihe 6: Aktivoi uusi näppäimistöasetus
-
+> 
 > Suorita komento:
-
+> 
 > sudo setupcon
-
+> 
 > Tämä päivittää näppäimistöasetuksen heti ilman uudelleenkäynnistystä.
 
-(ChatGPT:n ohje päättyy tähän)
+Ohjeiden suorittamisen jälkeen tuli virheilmoitus "We are not on on the console, the console is left unconfigured". ChatGPT:n mukaan ilmoitus johtuu siitä, että 
+> VirtualBoxin kautta käynnistetty Linux ei ole “oikealla konsolilla” (tty), vaan X-ikkuna-ympäristössä (grafiikka). dpkg-reconfigure keyboard-configuration toimii täydellisesti vain suoraan konsolissa, ei X:n kautta.
 
+Kokeilin myös seuraavanlaista ChatGPT:n ohjetta:
 
+> Vaihtoehto 2: Pysyvä asetus järjestelmätasolla
 
+> Tämä toimii myös konsolissa (tty):
+> Avaa terminaali.
+> Suorita:
+> 
+> sudo nano /etc/default/keyboard
+> 
+> Muokkaa tiedosto näyttämään esimerkiksi tältä:
+> 
+> XKBMODEL="pc105"
+> 
+> XKBLAYOUT="fi"
+> 
+> XKBVARIANT=""
+> 
+> XKBOPTIONS=""
+> 
+> Tallenna tiedosto (Ctrl+O → Enter → Ctrl+X).
+> Päivitä asetukset komennolla:
+> 
+> sudo setupcon
+> 
+> Käynnistä kone uudelleen, asetuksen pitäisi säilyä.
 
+Asetukset eivät edelleenkään säilyneet virtuaalikoneen uudelleenkäynnistyksen jälkeen, ja tässä vaiheessa huomasin, että tämän saa hoidettua Johanna Heinosen ohjeen kohdan nro 3 (Real Installation) mukaan etenemällä.
 
+Uudelleenkäynnistin virtuaalikoneen päästäkseni Live Boot Menu with GRUB -näkymään. Valitsin "Start installer" (+enter).
 
+Asettamani asetukset lyhyesti:
+- Select a language -> english
+- Select your location -> other > Europe > Finland
+- Configure locales -> United States en_US_UTF-8
+- Configure the keyboard -> Finnish
+- Configure the network ->  "linux-test"
+- Configure the network -> "example.com"
+- Set up users and passwords -> jätin kentät tyhjiksi
+- Set up users and passwords -> "Samuli Toropainen"
+- Set up users and passwords -> "samuli"
+- Set up users and passwords -> *Valitsin tähän vahvan salasanan*
+- Partition disks -> "Guided - use entire disk"
+- Partition disks -> Valitsin ainoan valittavissa olevan vaihtoehdon, en muista enää mitä siinä luki
+- Partition disks -> All files in one partition (recommended for nw users)
+- Partition disks -> Finish partitioning and write changes to disk
+- Partition disks -> Write the changes to disks? -> Valitsin "Yes"
+- Finish the installation -> Continue
 
+Tämän jälkeen suominäppis säilyi myös virtuaalikoneen uudelleenkäynnistyksen jälkeen.
 
+Viimeisenä vuorossa oli Johanna Heinosen ohjeen kohta "**5. Populating sources.list**". Huomasin ettei oman koneen selaimesta saanutkaan kopioitua ja liitettyä Johannan ohjeen mukaista rimpsua komentokehotteeseen ctrl+c ctrl+v -tekniikalla. ChatGPT ohjeisti muuttamaan tätä varten asetuksen: 
+
+Devices -> Shared clipboard -> Bidirectional.
+
+Tämäkään ei ratkaissut ongelmaa, joten kiersin sen avaamalla **virtuaalikoneeltani** nettiselaimen, navigoimalla Johanna Heinosen ohjesivulle, kopioimalla rimpsun sieltä ja liittämällä sen Debianin komentokehotteeseen -> tällä tavalla onnistui ja minulla on tallessa kuvakaappaus lopputuloksesta:
+
+<img width="804" height="96" alt="image" src="https://github.com/user-attachments/assets/ad5a2a38-0ada-4c2d-8af7-18c97803b4e2" />
+
+Lopuksi päivitin (ChatGPT:n kehotuksesta) kaikki asennetut ohjelmat syöttämällä komentokehotteeseen komennon:
+
+sudo apt-get upgrade
+
+Tämän jälkeen päivitykset rullasivat läpi.
 
 
