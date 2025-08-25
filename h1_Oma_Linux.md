@@ -37,7 +37,9 @@ Valitettavasti en huomannut ottaa tästä osiosta kuvakaappauksia tai tehdä mui
 1. Käynnistin virtuaalikoneen VirtualBoxissa tuplaklikkaamalla koneen kuvaketta vasemmasta palkista.
 2. Tässä näkymässä painoin enteriä avatakseni Debianin:
 <img width="619" height="546" alt="image" src="https://github.com/user-attachments/assets/587b5adb-d135-4624-9077-499a63ed5624" />
+
 Kuvan lähde: https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-20082025.md
+
 3. Debian aukesi ja kokeilin klikkailla eri valikoita, avasin komentokehotteen ja avasin nettiselaimen.
 4. Komentokehote ei ymmärtänyt ääkkösiä ja monet erikoismerkitkin antoivat eri merkkejä kuin olisi pitänyt. Yritin ensin muuttaa näppäimistön asetukset suomeksi valitsemalla Applications > Settings > Keyboard > Layout-välilehti, poistamalla "English" ja lisäämällä "Finnish" keyboard layoutin. Tämä toki muutti näppiksen suomeksi, mutta asetus ei pysynyt virtuaalikoneen buutin myötä vaan palasi lähtötilanteeseen. Seuraavaksi kokeilin näppäimistöasetusten muuttamista ChatGPT:n ohjeen mukaan:
 
@@ -81,7 +83,7 @@ sudo setupcon
 
 Tämä päivittää näppäimistöasetuksen heti ilman uudelleenkäynnistystä.
 
->> ChatGPT:n ohje päättyy tähän <<
+(ChatGPT:n ohje päättyy tähän)
 
 
 
