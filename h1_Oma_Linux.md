@@ -43,45 +43,45 @@ Kuvan lähde: https://github.com/johannaheinonen/johanna-test-repo/blob/main/lin
 3. Debian aukesi ja kokeilin klikkailla eri valikoita, avasin komentokehotteen ja avasin nettiselaimen.
 4. Komentokehote ei ymmärtänyt ääkkösiä ja monet erikoismerkitkin antoivat eri merkkejä kuin olisi pitänyt. Yritin ensin muuttaa näppäimistön asetukset suomeksi valitsemalla Applications > Settings > Keyboard > Layout-välilehti, poistamalla "English" ja lisäämällä "Finnish" keyboard layoutin. Tämä toki muutti näppiksen suomeksi, mutta asetus ei pysynyt virtuaalikoneen buutin myötä vaan palasi lähtötilanteeseen. Seuraavaksi kokeilin näppäimistöasetusten muuttamista ChatGPT:n ohjeen mukaan:
 
-Vaihe 1: Suorita komento
-Avaa terminaali ja kirjoita:
+> Vaihe 1: Suorita komento
+> Avaa terminaali ja kirjoita:
 
-sudo dpkg-reconfigure keyboard-configuration
+> sudo dpkg-reconfigure keyboard-configuration
 
-Paina Enter.
-Sinulta pyydetään salasanaa, kirjoita se ja paina Enter.
+> Paina Enter.
+> Sinulta pyydetään salasanaa, kirjoita se ja paina Enter.
 
-Vaihe 2: Valitse näppäimistömalli
+> Vaihe 2: Valitse näppäimistömalli
 
-Näyttöön tulee lista malleista.
-Liiku nuolinäppäimillä (↑ ja ↓) kohtaan:
-Generic 105-key (Intl) PC
-Paina Enter.
+> Näyttöön tulee lista malleista.
+> Liiku nuolinäppäimillä (↑ ja ↓) kohtaan:
+> Generic 105-key (Intl) PC
+> Paina Enter.
 
-Vaihe 3: Valitse näppäimistön asettelu
+> Vaihe 3: Valitse näppäimistön asettelu
 
-Seuraavaksi tulee lista kielistä/layouteista.
-Liiku nuolinäppäimillä kohtaan:
-Finnish
-Paina Enter.
+> Seuraavaksi tulee lista kielistä/layouteista.
+> Liiku nuolinäppäimillä kohtaan:
+> Finnish
+> Paina Enter.
 
-Vaihe 4: Other options
+> Vaihe 4: Other options
 
-Seuraavat kysymykset ovat yleensä oletusarvoja (esim. “Use Control+Alt+Backspace to terminate the X server?”).
-Jos haluat jättää oletuksiksi, paina Enter jokaisessa.
+> Seuraavat kysymykset ovat yleensä oletusarvoja (esim. “Use Control+Alt+Backspace to terminate the X server?”).
+> Jos haluat jättää oletuksiksi, paina Enter jokaisessa.
 
-Vaihe 5: Tallenna asetukset
+> Vaihe 5: Tallenna asetukset
 
-Ohjelma tallentaa asetukset automaattisesti, kun olet käynyt läpi kaikki valinnat.
-Ei siis tarvita erillistä “Save”-painiketta – Enter viimeisessä valikossa riittää.
+> Ohjelma tallentaa asetukset automaattisesti, kun olet käynyt läpi kaikki valinnat.
+> Ei siis tarvita erillistä “Save”-painiketta – Enter viimeisessä valikossa riittää.
 
-Vaihe 6: Aktivoi uusi näppäimistöasetus
+> Vaihe 6: Aktivoi uusi näppäimistöasetus
 
-Suorita komento:
+> Suorita komento:
 
-sudo setupcon
+> sudo setupcon
 
-Tämä päivittää näppäimistöasetuksen heti ilman uudelleenkäynnistystä.
+> Tämä päivittää näppäimistöasetuksen heti ilman uudelleenkäynnistystä.
 
 (ChatGPT:n ohje päättyy tähän)
 
