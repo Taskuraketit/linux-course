@@ -206,32 +206,10 @@ Komento ja tulos:
 Ensiyrittämällä komento ei toiminut joten ohjelma piti asentaa:
 <img width="832" height="525" alt="image" src="https://github.com/user-attachments/assets/22679640-a9db-4d86-b2c6-d2f36412f8a2" />
 
-<img width="1274" height="471" alt="image" src="https://github.com/user-attachments/assets/c930d3c7-ce35-41ca-b20e-22e401392800" />
-Virtuaalikone käyttää isäntäkoneen prosessoria ja sille on annettu 2 gigatavua muistia.
+<img width="1281" height="766" alt="image" src="https://github.com/user-attachments/assets/1268fef0-feec-4ae5-8db7-40f9ae3da874" />
 
-<img width="877" height="721" alt="image" src="https://github.com/user-attachments/assets/b1fc1e1d-304a-48d6-ba02-097070e657cc" />
-PCI-väylä
-- Emuloitu PCI-isäntäpiiri (Intel 440FX, koodinimi Natoma).
-- Yleinen emulaatio, jota käytetään virtuaalikoneohjelmissa (esim. QEMU, VirtualBox).
-- Toimii ikään kuin "silta" muiden laitteiden ja prosessorin välillä.
-- 32-bittinen, kellotaajuus 33 MHz (tyypillistä PCI-väylälle).
+Virtuaalikone käyttää niitä resursseja, jotka sille on Virtualboxissa annettu.
 
-ISA-väylä
-- Vanha laitetuki, kuten näppäimistö ja hiiri
-- Intelin PIIX3-piirisarja emuloituna.
-- Tätä käytetään edelleen virtuaalikoneissa, koska monet käyttöjärjestelmät osaavat sen avulla keskustella peruslaitteiden kanssa.
-
-PnP-laitteet (Plug and Play)
-- PNP0303 = näppäimistö (kbd = keyboard)
-- PNP0F03 = hiiri (aux = auxiliary device)
-- Molemmat käyttävät i8042-ohjainta, joka on vanha mutta standardoitu tapa ohjata näppäimistöä ja hiirtä.
-
-IDE-väylä
-- Tämä on IDE-väylän emulaatio (nykyään vanhentunut, mutta yhä käytetään VM:issä).
-- Mahdollistaa virtuaalilevyjen ja CD/DVD-asemien liittämisen käyttöjärjestelmälle.
-- Näkyy loogisesti nimellä scsi0, vaikka oikeasti kyseessä on emuloitu IDE.
-
-Lisäksi listassa näkyy tiedot mm. DVD-asemasta (cd-rom), näytönohjaimesta (display), verkkoyhteydestä (network), "yleisluontoisesta" oheistarvikkeesta (generic), äänikortista (multimedia), USB-ohjaimesta sekä eri syöttölaitteista (input: X),
 
 **lshw raportoi virtuaalikoneen näkymän laitteistosta, joka on abstrahoitu ja usein rajallinen kopio isäntikoneen laitteista.**
 
