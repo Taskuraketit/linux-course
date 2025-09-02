@@ -5,7 +5,7 @@
 
 ### Yhteenveto
 Linuxin tärkeimmät komennot on syytä opetella ulkoa, jotta operointi Linuxin komentokehotteessa käy sujuvasti. Kopiointi-, siirto- ja poistokomennot ovat loppujen lopuksi loogisia ja yksinkertaisia kunhan niitä tottuu käyttämään.
-Erityisesti poistolauseiden kanssa ons syytä olla varovainen, koska poisto tapahtuu yleensä **ilman varoituksia tai varmisteluja**.
+Erityisesti poistolauseiden kanssa ons syytä olla varovainen, koska poisto tapahtuu yleensä **ilman varoituksia tai varmisteluja**. Tämän tehtävän tekemisestä minulle jäi fiilis, että haluan tehdä lisää Linux-aiheisia muistiinpanoja tärkeistä komennoista ja toiminnoista.
 
 ### Tiivistelmä
 
@@ -165,16 +165,19 @@ Työskentele komentokehotteessa ja näytä komennot, joilla etsit esimerkit.
 ## d) The Friendly M. Näytä 2-3 kuvaavaa esimerkkiä grep-komennon käytöstä. Ohjeita löytyy 'man grep' ja tietysti verkosta.
 
 **grep-komennon peruskäyttö**
+
 Komento *'grep "hakusana" tiedosto.txt'* etsii tiedostosta rivit, joissa esiintyy kyseinen hakusana
 
 <img width="837" height="546" alt="image" src="https://github.com/user-attachments/assets/8a0ef6ba-d6af-4aad-ae16-c8269c8ed455" />
 
 **rivinumerot**
+
 Komento *'grep -n "hakusana" tiedosto.txt'* näyttää rivinumerot, joilla hakusana esiintyy
 
 <img width="712" height="87" alt="image" src="https://github.com/user-attachments/assets/80dbfd7b-dfab-4536-ad48-6858ea544322" />
 
 **hakusanan pois sulkeminen hakutuloksista**
+
 Komento *'grep -v "hakusana" tiedosto.txt" näyttää rivit, joilla hakusanaa **ei esiinny**.
 
 <img width="681" height="101" alt="image" src="https://github.com/user-attachments/assets/08f94dab-76f7-44e2-8aa9-d00a5654010a" />
@@ -184,7 +187,65 @@ Komento *'grep -v "hakusana" tiedosto.txt" näyttää rivit, joilla hakusanaa **
 
 Putkittaminen eli |-symbolin käytöllä toisen ohjelman standardituloste ohjataan toisen ohjelman standardisyötteeseen. Putken käyttö grep- ja less-komentojen kanssa on erittäin tärkeää Linuxin komentokehotteen sujuvan käytön kannalta.
 
+**Tiedostojen määrän laskeminen**
+
+Komento *'$ ls /etc | wc -l'* listaa /et-kansion sisälllön ja laskee montako tiedostoa sieltä löytyy.
+
+Komento ja tulos:
+<img width="827" height="150" alt="image" src="https://github.com/user-attachments/assets/f9ca348e-f477-4051-a229-db7bbc071fea" />
+
+**Asennettujen pakettien määrän laskeminen**
+
+Komento *'$ dpkg -l | wc -l'* laskee asennettujen pakettien määrän.
+
+Komento ja tulos:
+<img width="397" height="73" alt="image" src="https://github.com/user-attachments/assets/960a259f-786f-4c62-b278-b04808a32906" />
+
 
 ## f) Rauta. Listaa testaamasi koneen rauta (‘sudo lshw -short -sanitize’). Asenna lshw tarvittaessa. Selitä ja analysoi listaus.
+
+Ensiyrittämällä komento ei toiminut joten ohjelma piti asentaa:
+<img width="832" height="525" alt="image" src="https://github.com/user-attachments/assets/22679640-a9db-4d86-b2c6-d2f36412f8a2" />
+
+<img width="1274" height="471" alt="image" src="https://github.com/user-attachments/assets/c930d3c7-ce35-41ca-b20e-22e401392800" />
+Virtuaalikone käyttää isäntäkoneen prosessoria ja sille on annettu 2 gigatavua muistia.
+
+<img width="877" height="721" alt="image" src="https://github.com/user-attachments/assets/b1fc1e1d-304a-48d6-ba02-097070e657cc" />
+PCI-väylä
+- Emuloitu PCI-isäntäpiiri (Intel 440FX, koodinimi Natoma).
+- Yleinen emulaatio, jota käytetään virtuaalikoneohjelmissa (esim. QEMU, VirtualBox).
+- Toimii ikään kuin "silta" muiden laitteiden ja prosessorin välillä.
+- 32-bittinen, kellotaajuus 33 MHz (tyypillistä PCI-väylälle).
+
+ISA-väylä
+- Vanha laitetuki, kuten näppäimistö ja hiiri
+- Intelin PIIX3-piirisarja emuloituna.
+- Tätä käytetään edelleen virtuaalikoneissa, koska monet käyttöjärjestelmät osaavat sen avulla keskustella peruslaitteiden kanssa.
+
+PnP-laitteet (Plug and Play)
+- PNP0303 = näppäimistö (kbd = keyboard)
+- PNP0F03 = hiiri (aux = auxiliary device)
+- Molemmat käyttävät i8042-ohjainta, joka on vanha mutta standardoitu tapa ohjata näppäimistöä ja hiirtä.
+
+IDE-väylä
+- Tämä on IDE-väylän emulaatio (nykyään vanhentunut, mutta yhä käytetään VM:issä).
+- Mahdollistaa virtuaalilevyjen ja CD/DVD-asemien liittämisen käyttöjärjestelmälle.
+- Näkyy loogisesti nimellä scsi0, vaikka oikeasti kyseessä on emuloitu IDE.
+
+Lisäksi listassa näkyy tiedot mm. DVD-asemasta (cd-rom), näytönohjaimesta (display), verkkoyhteydestä (network), "yleisluontoisesta" oheistarvikkeesta (generic), äänikortista (multimedia), USB-ohjaimesta sekä eri syöttölaitteista (input: X),
+
+**lshw raportoi virtuaalikoneen näkymän laitteistosta, joka on abstrahoitu ja usein rajallinen kopio isäntikoneen laitteista.**
+
+
+# Lähteet:
+- Karvinen, T. 2020. Command line basics revisited. Luettavissa: https://terokarvinen.com/2020/command-line-basics-revisited/. Luettu: 1.9.2025.
+- Linux.fi. Grep. Luettavissa: https://www.linux.fi/wiki/Grep. Luettu: 1.9.2025.
+- Linux.fi. Putki. Luettavissa: https://www.linux.fi/wiki/Putki. Luettu: 1.9.2025.
+- Quora. How do Install 2 programs simultaneously in Linux? Luettavissa: https://www.quora.com/How-do-I-install-2-programs-simultaneously-in-Linux. Luettu: 1.9.2025.
+
+
+
+
+Seuraavat tehtävät jätän myöhemmäksi... :)
 ## g) Vapaaehtoinen: Valitse muutama rivi lokeista. Tulkitse ja analysoi.
 ## h) Vapaaehtoinen: Asenna jokin plugin micro-editorille ja kokeile sitä. Vaikkapa palettero, cheat tai runit.
