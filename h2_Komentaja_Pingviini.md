@@ -195,6 +195,7 @@ Putkittaminen eli |-symbolin käytöllä toisen ohjelman standardituloste ohjata
 Komento *'$ ls /etc | wc -l'* listaa /et-kansion sisälllön ja laskee montako tiedostoa sieltä löytyy.
 
 Komento ja tulos:
+
 <img width="827" height="150" alt="image" src="https://github.com/user-attachments/assets/f9ca348e-f477-4051-a229-db7bbc071fea" />
 
 **Asennettujen pakettien määrän laskeminen**
@@ -202,6 +203,7 @@ Komento ja tulos:
 Komento *'$ dpkg -l | wc -l'* laskee asennettujen pakettien määrän.
 
 Komento ja tulos:
+
 <img width="397" height="73" alt="image" src="https://github.com/user-attachments/assets/960a259f-786f-4c62-b278-b04808a32906" />
 
 
