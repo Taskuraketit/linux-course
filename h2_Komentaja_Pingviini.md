@@ -90,7 +90,8 @@ Koska Linux-ohjelmien tuntemukseni on heikkoa, kysyin ChatGPT:ltä vinkkejä mit
 - **fzf**: Interaktiivinen tiedostojen ja komentohistorian haku
 
 Käytetty komento alla. Yksi tai useampi ohjelma ehdotti ylimääräisiä paketteja asennettavaksi. 
-<img width="1298" height="807" alt="image" src="https://github.com/user-attachments/assets/4f0bfaf3-c339-4308-89dd-f062e94a1b7c" />
+<img width="937" height="566" alt="image" src="https://github.com/user-attachments/assets/2829f9f4-3a71-4969-bacf-b447c4cf332f" />
+
 
 <img width="1283" height="315" alt="image" src="https://github.com/user-attachments/assets/44e7fd4a-4c70-47b3-87bd-961a3ee27039" />
 
