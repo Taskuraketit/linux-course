@@ -1,5 +1,3 @@
-# KESKEN #
-
 # h2 Komentaja Pingviini 
 ## x) Lue ja tiivistä (Muutama ranskalainen viiva riittää. Tässä alakohdassa ei tarvitse tehdä testejä tietokoneella. Lisää jokin oma kysymys, idea tai huomio). Karvinen 2020: Command line basics revisited (nämä komennot ja hakemistot kannattaa myös opiskella ulkoa ja harjoitella automaatiotasolle)
 
