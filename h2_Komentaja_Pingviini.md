@@ -68,11 +68,9 @@ Tästä tarkempi selostus alla kohdassa c)
 <img width="1144" height="288" alt="image" src="https://github.com/user-attachments/assets/6aa8f992-2169-4e5c-826d-512298db7532" />
 
 **Micron asennus**
-<img width="1144" height="288" alt="image" src="https://github.com/user-attachments/assets/30f34b65-57e9-466b-ad58-927f08699716" />
-
+Tästä valitettavasti puuttuu kuvakaappaus, mutta käytin komentoa *'$ sudo apt-get install -y micro'*
 
 **Micron testaus**
-
 <img width="594" height="471" alt="image" src="https://github.com/user-attachments/assets/a7c052ad-475f-410f-b0d4-c19a63d027d3" />
 
 
