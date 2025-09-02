@@ -215,8 +215,6 @@ Ensiyrittämällä komento ei toiminut joten ohjelma piti asentaa:
 Virtuaalikone käyttää niitä resursseja, jotka sille on Virtualboxissa annettu.
 
 
-**lshw raportoi virtuaalikoneen näkymän laitteistosta, joka on abstrahoitu ja usein rajallinen kopio isäntikoneen laitteista.**
-
 
 # Lähteet:
 - Karvinen, T. 2020. Command line basics revisited. Luettavissa: https://terokarvinen.com/2020/command-line-basics-revisited/. Luettu: 1.9.2025.
