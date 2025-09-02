@@ -65,13 +65,19 @@ Tästä tarkempi selostus alla kohdassa c)
   
 ## a) Micro. Asenna micro-editori.
 **Pakettiluettelon päivitys**
+
 <img width="1144" height="288" alt="image" src="https://github.com/user-attachments/assets/6aa8f992-2169-4e5c-826d-512298db7532" />
 
 **Micron asennus**
+
 Tästä valitettavasti puuttuu kuvakaappaus, mutta käytin komentoa *'$ sudo apt-get install -y micro'*
 
+
+
 **Micron testaus**
+
 <img width="594" height="471" alt="image" src="https://github.com/user-attachments/assets/a7c052ad-475f-410f-b0d4-c19a63d027d3" />
+
 
 
 <img width="1146" height="708" alt="image" src="https://github.com/user-attachments/assets/ef1a2e06-7263-4b4b-8342-069e20a3d8eb" />
