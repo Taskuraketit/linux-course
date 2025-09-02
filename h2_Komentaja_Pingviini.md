@@ -84,16 +84,17 @@ Tästä valitettavasti puuttuu kuvakaappaus, mutta käytin komentoa *'$ sudo apt
 
 
 
-## b) Apt. Asenna kolme itsellesi uutta komentoriviohjelmaa. Kokeile kutakin ohjelmaa sen pääasiallisessa käyttötarkoituksessa. 
-Ota ruutukaappaus. Kaikki terminaaliohjelmat kelpaavat, TUI (text user interface) ja CLI (command line interface). Osaatko tehdä apt-get komennon, joka asentaa nämä kolme ohjelmaa kerralla?
+## b) Apt. Asenna kolme itsellesi uutta komentoriviohjelmaa. Kokeile kutakin ohjelmaa sen pääasiallisessa käyttötarkoituksessa. Ota ruutukaappaus. Kaikki terminaaliohjelmat kelpaavat, TUI (text user interface) ja CLI (command line interface). Osaatko tehdä apt-get komennon, joka asentaa nämä kolme ohjelmaa kerralla?
 
 **Kolmen ohjelman asennus**
+
 Koska Linux-ohjelmien tuntemukseni on heikkoa, kysyin ChatGPT:ltä vinkkejä mitä komentorivityökaluja kannattaa asentaa. ChatGPT:n ehdotuksista poimin seuraavat jotka kuulostivat houkuttelevimmilta:
 - **glances**: Laajempi järjestelmämonitori yhdellä näkymällä
 - **htop**: Reaaliaikainen prosessien ja resurssien näyttö, helppo navigointi
 - **fzf**: Interaktiivinen tiedostojen ja komentohistorian haku
 
 Käytetty komento alla. Yksi tai useampi ohjelma ehdotti ylimääräisiä paketteja asennettavaksi. 
+
 <img width="937" height="566" alt="image" src="https://github.com/user-attachments/assets/2829f9f4-3a71-4969-bacf-b447c4cf332f" />
 
 
