@@ -120,9 +120,7 @@ Pitkän asennusrupeaman jälkeen päästiin loppuun:
 <img width="1285" height="773" alt="image" src="https://github.com/user-attachments/assets/bceab762-21cc-41ce-bb87-999be70cf4b9" />
 
 
-## c) FHS. Esittele kansiot, jotka on listattu "Command Line Basics Revisited" kappaleessa "Important directories". 
-Näytä kuvaava esimerkki kunkin tärkeän kansion sisältämästä tiedostosta tai kansiosta. Jos kyseessä on tiedosto, näytä siitä kuvaava esimerkkirivi. 
-Työskentele komentokehotteessa ja näytä komennot, joilla etsit esimerkit.
+## c) FHS. Esittele kansiot, jotka on listattu "Command Line Basics Revisited" kappaleessa "Important directories". Näytä kuvaava esimerkki kunkin tärkeän kansion sisältämästä tiedostosta tai kansiosta. Jos kyseessä on tiedosto, näytä siitä kuvaava esimerkkirivi. Työskentele komentokehotteessa ja näytä komennot, joilla etsit esimerkit.
 
 **/ - Juurihakemisto (Root Directory)**
 - Tämä on juurihakemisto, koko tiedostojärjestelmän ylin taso.
@@ -229,5 +227,6 @@ Virtuaalikone käyttää niitä resursseja, jotka sille on Virtualboxissa annett
 
 
 Seuraavat tehtävät jätän myöhemmäksi... :)
+
 ## g) Vapaaehtoinen: Valitse muutama rivi lokeista. Tulkitse ja analysoi.
 ## h) Vapaaehtoinen: Asenna jokin plugin micro-editorille ja kokeile sitä. Vaikkapa palettero, cheat tai runit.
