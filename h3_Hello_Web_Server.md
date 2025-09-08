@@ -57,14 +57,17 @@ Tarkastellaan viimeisintä riviä '127.0.0.1 - - [08/Sep/2025:22:10:40 +0300] "G
 - **"Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"**: Tämä on User-Agent, eli tiedot selaimesta. X11; Linux x86_64 → käytössä on 64-bittinen Linux. Firefox/128.0 → selain on Mozilla Firefox, versio 128. 
 Gecko/20100101 → Gecko-renderöintimoottori.
 
-
-
-
-
-
 # c) Etusivu uusiksi. Tee uusi name based virtual host. Sivun tulee näkyä suoraan palvelimen etusivulla http://localhost/. Sivua pitää pystyä muokkaamaan normaalina käyttäjänä, ilman sudoa. Tee uusi, laita vanhat pois päältä. Uusi sivu on hattu.example.com, ja tämän pitää näkyä: asetustiedoston nimessä, asetustiedoston ServerName-muuttujassa sekä etusivun sisällössä (esim title, h1 tai p).
 
+**Käytetään viime luennolla luotua kotihakemistoa ja index.html-tiedostoa**
 
+<img width="542" height="647" alt="image" src="https://github.com/user-attachments/assets/c65a056a-a3d4-4339-b1e5-9815f8f482d3" />
+
+**Lisätään yksinkertainen etusivu**
+
+<img width="728" height="305" alt="image" src="https://github.com/user-attachments/assets/25b026da-3b53-48bf-9c53-e104496b0e79" />
+
+**Luodaan uusi 
 
 # e) Tee validi HTML5 sivu.
 
