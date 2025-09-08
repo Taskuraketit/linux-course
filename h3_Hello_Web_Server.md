@@ -125,7 +125,16 @@ Gecko/20100101 → Gecko-renderöintimoottori.
 
 <img width="715" height="242" alt="image" src="https://github.com/user-attachments/assets/7da8ba4f-9137-42cb-b58f-d041c2beb750" />
 
+
 <img width="552" height="158" alt="image" src="https://github.com/user-attachments/assets/03714fee-d8a8-485a-9e97-9e537f138206" />
+
+**Tässä vaiheessa keksin kokeilla tyhjentää virutaalikoneen selaimen sivuhistorian, evästeet ym... ja se alkoi kuin alkoikin toimia halutulla tavalla :D**
+
+<img width="700" height="242" alt="image" src="https://github.com/user-attachments/assets/5ccac6c5-d0df-4e7b-8b9a-8eb0b1442579" />
+
+<img width="670" height="232" alt="image" src="https://github.com/user-attachments/assets/6806612a-59c2-4943-bf70-2060bd39c0e7" />
+
+Ja näin päästiin vaikeuksien kautta voittoon - *per aspera ad astra*
 
 
 # e) Tee validi HTML5 sivu.
