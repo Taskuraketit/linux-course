@@ -163,6 +163,8 @@ Sivu oli jo enabloitu.
 
 <img width="631" height="45" alt="image" src="https://github.com/user-attachments/assets/1725618e-9f4b-4fd2-8012-cca4faaa2a88" />
 
+Koska selain näytti localhostissa aiemmin luodun oletussivun, tarvittiin vähän kikkailua...
+
 **Tiedoston kopiointi ja Apachen uudelleenkäynnistys**
 
 <img width="836" height="787" alt="image" src="https://github.com/user-attachments/assets/e372a506-a201-4e34-9b17-f28b54d492d7" />
@@ -175,9 +177,15 @@ Sivu oli jo enabloitu.
 <img width="556" height="246" alt="image" src="https://github.com/user-attachments/assets/2fecc297-e7e7-4124-bc8b-07d0ba916e8d" />
 
 
-
 # f) Anna esimerkit 'curl -I' ja 'curl' -komennoista. Selitä 'curl -I' muutamasta näyttämästä otsakkeesta (response header), mitä ne tarkoittavat.
 
+curl ja curl -I käytetään verkkopyyntöjen testaamiseen ja tiedon hakemiseen palvelimelta.
+- curl → hakee koko sivun sisällön (HTML, JSON tms.), jolloin näkee sivun todellisen datan.
+- curl -I → hakee vain HTTP-otsakkeet (response headers), jolloin näkee palvelimen tilan, vastauskoodin, sisällön tyypin ja muut metatiedot ilman varsinaista sisältöä.
+
+Näillä komennoilla voi nopeasti tarkistaa, toimiiko palvelin, mikä statuskoodi tulee ja millaisia otsakkeita se lähettää, ilman selainta.
+
+<img width="802" height="567" alt="image" src="https://github.com/user-attachments/assets/267f55c6-6d82-48fb-9ea2-eed152bb74c7" />
 
 
 # m) Vapaaehtoinen, suosittelen tekemään: Hanki GitHub Education -paketti.
