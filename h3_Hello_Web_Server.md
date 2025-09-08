@@ -191,5 +191,11 @@ Näillä komennoilla voi nopeasti tarkistaa, toimiiko palvelin, mikä statuskood
 # m) Vapaaehtoinen, suosittelen tekemään: Hanki GitHub Education -paketti.
 
 
-
 # o) Vapaaehtoinen, vaikea: Laita sama tietokone vastaamaan kahdellla eri sivulla kahdesta eri nimestä. Eli kaksi weppisiteä samalla koneelle, esim. foo.example.com ja bar.example.com. Voit simuloida nimipalvelun toimintaa hosts-tiedoston avulla.
+
+
+# Lähteet
+- Apache s.a. Name-based Virtual Host Support. Luettavissa: https://httpd.apache.org/docs/2.4/vhosts/name-based.html. Luettu: 8.9.2025.
+- Karvinen, T. 2018. Name Based Virtual Hosts on Apache – Multiple Websites to Single IP Address. Luettavissa: https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/. Luettu: 8.9.2025.
+
+Lisäksi käytetty ChatGPT:tä ongelmanselvityksen tukena sekä selittämään eri komentojen sisältöjä.
