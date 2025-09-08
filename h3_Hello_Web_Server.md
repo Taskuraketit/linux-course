@@ -73,6 +73,60 @@ Gecko/20100101 → Gecko-renderöintimoottori.
 
 <img width="816" height="358" alt="image" src="https://github.com/user-attachments/assets/4384a6d9-022d-4533-bc8a-387637fc9ad4" />
 
+**Poistetaan vanha oletussivu käytöstä**
+
+<img width="914" height="209" alt="image" src="https://github.com/user-attachments/assets/9694c7a7-9d21-4fce-89ee-fa4f52fa9d2d" />
+
+**Otetaan uusi oletussivu käyttöön ja käynnistetään Apache uudestaan**
+
+<img width="914" height="337" alt="image" src="https://github.com/user-attachments/assets/37cb2081-e79b-443a-93f7-277138f42289" />
+
+**Jotain meni pieleen, koska oletussivuna näkyy luennolla luomani sivu...**
+
+<img width="562" height="160" alt="image" src="https://github.com/user-attachments/assets/2cd8e8b7-8b68-40bc-9733-9318576b590b" />
+
+**Tarkistetaan hattu.example.com.conf-tiedoston sisältö**
+
+<img width="774" height="303" alt="image" src="https://github.com/user-attachments/assets/4afab254-5d06-4244-a437-bd628c201b26" />
+
+**Poistetaan vanha tiedosto käytöstä ja otetaan uusi käyttöön**
+
+<img width="940" height="308" alt="image" src="https://github.com/user-attachments/assets/d0b89de6-dc76-46ac-84db-ebec1384f865" />
+
+**...edelleen sama lopputulos..**
+
+<img width="612" height="168" alt="image" src="https://github.com/user-attachments/assets/7cf1ef1a-4382-4164-ad4a-c4c3fe738f24" />
+
+**Kävin ohjetta uudelleen läpi ja huomasin, että oletussivun sisältävä tiedosto löytyy täältä:**
+
+<img width="537" height="202" alt="image" src="https://github.com/user-attachments/assets/3da3af5d-f86c-4b79-a191-ad5e5e42314b" />
+
+**Kopioidaan aiemmin luomani tiedosto uuteen sijaintiin**
+
+<img width="680" height="177" alt="image" src="https://github.com/user-attachments/assets/602ef331-92d5-4488-9618-b316c534a3ae" />
+
+**Samojen komentojen syöttö uudelleen...**
+
+<img width="739" height="144" alt="image" src="https://github.com/user-attachments/assets/c459af23-4891-436f-bad0-a8277ed30288" />
+
+**Tarkistetaan hosts-tiedoston sisältö**
+
+<img width="613" height="63" alt="image" src="https://github.com/user-attachments/assets/e00e69f4-7bf1-4b90-88f2-a231a523c241" />
+
+**Päivitetään sisältö (tekstitiedostossa oli luennolla syötetyt tiedot site1.com-sivusta)**
+
+<img width="775" height="129" alt="image" src="https://github.com/user-attachments/assets/633fe832-9640-446a-9d4d-45b2878c4c02" />
+
+**Apachen uudelleenkäynnistys**
+
+<img width="578" height="63" alt="image" src="https://github.com/user-attachments/assets/7ecc7f0b-e572-42a8-8467-ae1789d9f951" />
+
+**Nyt päästiin jo siihen asti, että sivu näkyy oikein kun syöttää osoitteen 127.0.0.1 osoiteriville, mutta pelkällä localhost-osoitteella ei löydy..**
+
+<img width="715" height="242" alt="image" src="https://github.com/user-attachments/assets/7da8ba4f-9137-42cb-b58f-d041c2beb750" />
+
+<img width="552" height="158" alt="image" src="https://github.com/user-attachments/assets/03714fee-d8a8-485a-9e97-9e537f138206" />
+
 
 # e) Tee validi HTML5 sivu.
 
