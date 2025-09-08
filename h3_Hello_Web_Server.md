@@ -139,6 +139,11 @@ Ja näin päästiin vaikeuksien kautta voittoon - *per aspera ad astra*
 
 # e) Tee validi HTML5 sivu.
 
+** Lähdetään liikkeelle varmuuskopion ottamisesta. Muokataan edellisessä tehtävässä luotua hattusivua.**
+
+<img width="691" height="296" alt="image" src="https://github.com/user-attachments/assets/f288f300-2ea6-4d7b-b937-b64065a52399" />
+
+<img width="840" height="328" alt="image" src="https://github.com/user-attachments/assets/29b97732-69b3-4754-8113-a9ee06f72fd2" />
 
 
 
