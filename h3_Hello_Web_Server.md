@@ -139,11 +139,40 @@ Ja näin päästiin vaikeuksien kautta voittoon - *per aspera ad astra*
 
 # e) Tee validi HTML5 sivu.
 
-** Lähdetään liikkeelle varmuuskopion ottamisesta. Muokataan edellisessä tehtävässä luotua hattusivua.**
+**Lähdetään liikkeelle varmuuskopion ottamisesta. Muokataan edellisessä tehtävässä luotua hattusivua.**
 
 <img width="691" height="296" alt="image" src="https://github.com/user-attachments/assets/f288f300-2ea6-4d7b-b937-b64065a52399" />
 
+
 <img width="840" height="328" alt="image" src="https://github.com/user-attachments/assets/29b97732-69b3-4754-8113-a9ee06f72fd2" />
+
+
+**Poistetaan vanha oletussivu**
+
+<img width="654" height="38" alt="image" src="https://github.com/user-attachments/assets/584b5113-3ad8-49c6-86e2-6d50da421d64" />
+
+Sivu oli jo disabbloitu.
+
+**Uuden virtual hostin käyttöönotto**
+
+<img width="698" height="41" alt="image" src="https://github.com/user-attachments/assets/e41ece6e-3119-454c-bb84-5bc4902ec110" />
+
+Sivu oli jo enabloitu.
+
+**Web-palvelimen avaus uudelleen**
+
+<img width="631" height="45" alt="image" src="https://github.com/user-attachments/assets/1725618e-9f4b-4fd2-8012-cca4faaa2a88" />
+
+**Tiedoston kopiointi ja Apachen uudelleenkäynnistys**
+
+<img width="836" height="787" alt="image" src="https://github.com/user-attachments/assets/e372a506-a201-4e34-9b17-f28b54d492d7" />
+
+**Poistettuani jälleen selaimesta sivuhistorian ja evästeet uusi oletussivu alkoi toimia. Jee!**
+
+<img width="572" height="252" alt="image" src="https://github.com/user-attachments/assets/55185161-8b15-4243-8c35-0dbf45754eee" />
+
+
+<img width="556" height="246" alt="image" src="https://github.com/user-attachments/assets/2fecc297-e7e7-4124-bc8b-07d0ba916e8d" />
 
 
 
