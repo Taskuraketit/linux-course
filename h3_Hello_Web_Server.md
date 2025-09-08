@@ -52,7 +52,10 @@ Tarkastellaan viimeisintä riviä '127.0.0.1 - - [08/Sep/2025:22:10:40 +0300] "G
 - **[08/Sep/2025:22:10:40 +0300]**: Päivämäärä ja kellonaika: 8. syyskuuta 2025 klo 22:10:40. +0300 = aikavyöhyke-ero GMT:stä → Suomen kesäaika (UTC+3).
 - **"GET / HTTP/1.1"**: Tämä on itse HTTP-pyyntö, GET = HTTP-metodi (halutaan hakea resurssi). / = palvelimen juuripolku → käytännössä etusivu. HTTP/1.1 = käytetty protokollaversio.
 - **304**: HTTP-palvelimen statuskoodi. 304 Not Modified tarkoittaa, että selain pyysi resurssia, mutta palvelin ilmoitti, että välimuistissa oleva kopio on edelleen ajantasainen → mitään sisältöä ei tarvitse lähettää uudelleen. Tämä on syy, miksi rivissä näkyy 304 eikä 200.
-- 
+- **248**: Tämä on vastauksen koko tavuina. Vaikka sisältöä ei lähetetty (koska 304), otsakkeet vievät silti hieman tilaa → siksi täällä näkyy 248 tavua.
+- **"-"**: Tämä on Referrer-kenttä, eli mistä käyttäjä tuli. "-" tarkoittaa, että pyyntöä ei tehty minkään muun sivun kautta (esim. osoite kirjoitettu suoraan selaimeen tai klikattu kirjanmerkkiä).
+- **"Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"**: Tämä on User-Agent, eli tiedot selaimesta. X11; Linux x86_64 → käytössä on 64-bittinen Linux. Firefox/128.0 → selain on Mozilla Firefox, versio 128. 
+Gecko/20100101 → Gecko-renderöintimoottori.
 
 
 
