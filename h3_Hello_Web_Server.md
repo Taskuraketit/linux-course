@@ -32,6 +32,7 @@
 <img width="1284" height="74" alt="image" src="https://github.com/user-attachments/assets/07e09840-5bb7-4e61-a802-8d65c15215d2" />
 Teksti "Enabled" kertoo, että Apache käynnistyy automaattisesti.
 
+
 **Kun kirjoitan osoiteriville "localhost", aukeaa seuraavanlainen sivu:**
 
 <img width="1281" height="886" alt="image" src="https://github.com/user-attachments/assets/5c48041a-4505-4ad0-bd39-c41d9b7518a4" />
@@ -39,6 +40,16 @@ Teksti "Enabled" kertoo, että Apache käynnistyy automaattisesti.
 
 
 # b) Etsi lokista rivit, jotka syntyvät, kun lataat omalta palvelimeltasi yhden sivun. Analysoi rivit (eli selitä yksityiskohtaisesti jokainen kohta ja numero, etsi tarvittaessa lähteitä).
+
+**Lokin rivit saa esiin komennolla 'sudo tail -f /var/log/apache2/access.log'**
+
+<img width="1280" height="385" alt="image" src="https://github.com/user-attachments/assets/8d699d0d-bc9d-4a4e-9d50-b42bbbbc8c3c" />
+
+Tarkastellaan viimeisintä riviä '127.0.0.1 - - [08/Sep/2025:22:10:40 +0300] "GET / HTTP/1.1" 304 248 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"'
+
+
+
+
 
 
 
