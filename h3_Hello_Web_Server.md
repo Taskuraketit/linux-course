@@ -30,12 +30,12 @@
 **Testataan käynnistyykö Apache automaattisesti virtuaalikoneen buutin yhteydessä**
 
 <img width="1284" height="74" alt="image" src="https://github.com/user-attachments/assets/07e09840-5bb7-4e61-a802-8d65c15215d2" />
-Teksti "Enab
+Teksti "Enabled" kertoo, että Apache käynnistyy automaattisesti.
 
+**Kun kirjoitan osoiteriville "localhost", aukeaa seuraavanlainen sivu:**
 
-
-
-
+<img width="1281" height="886" alt="image" src="https://github.com/user-attachments/assets/5c48041a-4505-4ad0-bd39-c41d9b7518a4" />
+-> web-palvelin vastaa localhost-osoitteesta.
 
 
 # b) Etsi lokista rivit, jotka syntyvät, kun lataat omalta palvelimeltasi yhden sivun. Analysoi rivit (eli selitä yksityiskohtaisesti jokainen kohta ja numero, etsi tarvittaessa lähteitä).
