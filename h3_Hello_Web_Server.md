@@ -17,6 +17,25 @@
 
 # a) Testaa, että weppipalvelimesi vastaa localhost-osoitteesta. Asenna Apache-weppipalvelin, jos se ei ole jo asennettuna.
 
+**Apahen asennus**
+
+<img width="1279" height="796" alt="image" src="https://github.com/user-attachments/assets/6d676cf0-fd9c-4aa1-9fbf-79bbe1232c28" />
+
+<img width="1278" height="794" alt="image" src="https://github.com/user-attachments/assets/5e9049dd-cea4-42bd-b7b0-9b358962a4c9" />
+
+**Statuksen tarkistus**
+
+<img width="1286" height="384" alt="image" src="https://github.com/user-attachments/assets/32b2a01f-a759-46ee-ab85-204271829ea1" />
+
+**Testataan käynnistyykö Apache automaattisesti virtuaalikoneen buutin yhteydessä**
+
+<img width="1284" height="74" alt="image" src="https://github.com/user-attachments/assets/07e09840-5bb7-4e61-a802-8d65c15215d2" />
+Teksti "Enab
+
+
+
+
+
 
 
 # b) Etsi lokista rivit, jotka syntyvät, kun lataat omalta palvelimeltasi yhden sivun. Analysoi rivit (eli selitä yksityiskohtaisesti jokainen kohta ja numero, etsi tarvittaessa lähteitä).
