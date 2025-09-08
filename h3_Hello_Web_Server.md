@@ -67,7 +67,12 @@ Gecko/20100101 → Gecko-renderöintimoottori.
 
 <img width="728" height="305" alt="image" src="https://github.com/user-attachments/assets/25b026da-3b53-48bf-9c53-e104496b0e79" />
 
-**Luodaan uusi 
+**Luodaan uusi Virtual Host -asetustiedosto**
+
+<img width="866" height="87" alt="image" src="https://github.com/user-attachments/assets/ade4160d-d412-4a53-b32f-ea7dd78728e8" />
+
+<img width="816" height="358" alt="image" src="https://github.com/user-attachments/assets/4384a6d9-022d-4533-bc8a-387637fc9ad4" />
+
 
 # e) Tee validi HTML5 sivu.
 
