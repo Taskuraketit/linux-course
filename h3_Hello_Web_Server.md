@@ -47,6 +47,12 @@ Teksti "Enabled" kertoo, että Apache käynnistyy automaattisesti.
 
 Tarkastellaan viimeisintä riviä '127.0.0.1 - - [08/Sep/2025:22:10:40 +0300] "GET / HTTP/1.1" 304 248 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"'
 
+- **127.0.0.1**: Tämä on asiakkaan IP-osoite. 127.0.0.1 tarkoittaa localhost → pyyntö tuli samalta koneelta, jossa palvelin pyörii.
+- **- -** Ensimmäinen - olisi identd-käyttäjänimi (vanha käytäntö, lähes aina tyhjä). Toinen - olisi HTTP-autentikoinnin käyttäjätunnus, jos sellainen olisi käytössä. Tässä ei ollut.
+- **[08/Sep/2025:22:10:40 +0300]**: Päivämäärä ja kellonaika: 8. syyskuuta 2025 klo 22:10:40. +0300 = aikavyöhyke-ero GMT:stä → Suomen kesäaika (UTC+3).
+- **"GET / HTTP/1.1"**: Tämä on itse HTTP-pyyntö, GET = HTTP-metodi (halutaan hakea resurssi). / = palvelimen juuripolku → käytännössä etusivu. HTTP/1.1 = käytetty protokollaversio.
+- **304**: HTTP-palvelimen statuskoodi. 304 Not Modified tarkoittaa, että selain pyysi resurssia, mutta palvelin ilmoitti, että välimuistissa oleva kopio on edelleen ajantasainen → mitään sisältöä ei tarvitse lähettää uudelleen. Tämä on syy, miksi rivissä näkyy 304 eikä 200.
+- 
 
 
 
