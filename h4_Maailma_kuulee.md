@@ -3,9 +3,91 @@
 
 ### a) Pilvipalvelimen vuokraus ja asennus
 
+- Kuvauksessaan palvelimen vuokrauksesta ja asennuksesta Susanna kertoo hankkineensa palvelimen DigitalOceanilta ja domainnimen Namecheapilta
+- Palvelimen vuokra DigitalOceanilta eteni raportin mukaan loogisesti valitsemalla halutut speksit (mm. Sijainti -> Amsterdam, joka oli vaihtoehdoista lähimpänä Helsinkiä) ja syöttämällä omat maksutiedot
+- Alkutoimien jälkeen virtuaalipalvelin oli valmis ja Susanna sai palvelimensa IP-osoitteen tietoon
+
+-  Domainnimen varaus on käynyt näemmä helposti tarkistamalla palvelusta nimen saatavuus ja valitsemalla itselle sopiva domainnimi
+-  Opiskelijana hän sai domainnimen ilmaiseksi (!)
+-  Muutaman mutkan kautta Susanna sai lopulta uuden domainnimensä osoittamaan uuden palvelimensa IP-osoitteeseen
+
 ### d) Palvelin suojaan palomuurilla
 
+**Palomuurin asennuksen toimenpiteet palvelimen komentorivillä:**
+
+ssh-yhteyden muodostus
+
+> $ ssh root@<ip-osoite>
+
+Ohjelmien päivitys
+
+> $ sudo apt-get update
+
+Palomuurin asennus
+
+> $ sudo apt-get install ufw
+
+Reiän tekeminen palomuuriin
+
+> $ sudo ufw allow 22/tcp
+
+Palomuurin laitto päälle
+
+> $ sudo ufw enable
+
+
 ### e) Kotisivut palvelimelle
+
+Käyttäjän lisäys virtuaalipalvelimelle
+
+> $ sudo adduser <käyttäjä>
+
+Pääkäyttäjän tekeminen käyttäjästä
+
+> $ sudo adduser <käyttäjä> sudo
+
+Virtuaalipalveimen testaus (toisessa terminaalissa)
+
+> $ ssh <käyttäjä>@<ip-osoite>
+> $ sudo apt-get update
+
+Juuren lukitseminen
+
+> $ sudo usermod –lock root
+
+Domainnimen pingaaminen testimielessä
+
+> $ ping <domainnimi>
+
+Toisen terminaalin avaaminen uudestaan + SSH-yhteyden muodostaminen pääkäyttäjänä. 
+Tietoturvapäivitysten asentaminen
+
+> $ sudo apt-get update
+> $ sudo apt-get upgrade
+> $ sudo apt-get dist-upgrade
+
+Apache-webbi-palvelimen asennus
+
+> $ sudo apt-get install apache2
+
+Palvelimen tilan tarkastelu
+
+> $ sudo systemctl status apache2
+
+Toisen reiän tekeminen palomuuriin:
+
+> $ sudo ufw allow 80/tcp
+
+...ja tämän jälkeen domainnimen testaus omalla palvelimella selaimessa.
+
+Apachen testisivun korvaaminen komennolla
+
+> $ echo Hello world! |sudo tee /var/www/html/index.html
+
+Userdir-moduulin käyttöönotto ja webbipalvelimen uudelleenkäynnistys
+
+> $ sudo a2enmod userdir
+> $ sudo service apache2 restart
 
 ### f) Palvelimen ohjelmien päivitys
 
