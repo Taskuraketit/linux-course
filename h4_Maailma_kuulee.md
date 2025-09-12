@@ -272,4 +272,49 @@ Päivitykset komennoilla:
 
 # c) Asenna weppipalvelin omalle virtuaalipalvelimellesi. Korvaa testisivu. Kokeile, että se näkyy julkisesti. Kokeile myös eri koneelta, esim kännykältä. (Jos haluat tehdä oikeat weppisivut, tarvitset Name Based Virtual Hostin)
 
+**Apachen asennus** 
+
+
+<img width="1277" height="777" alt="image" src="https://github.com/user-attachments/assets/a841165f-3d68-46de-b2ae-f5cce2e416e8" />
+
+
+**Statuksen tarkistus**
+
+
+<img width="1278" height="374" alt="image" src="https://github.com/user-attachments/assets/1f4ac0c0-728a-41a2-81f0-f80a0752fdd0" />
+
+
+**Tarkistetaan, että Apache2 käynnistyy Debianin uudelleenkäynnistyessä**
+
+
+<img width="758" height="130" alt="image" src="https://github.com/user-attachments/assets/987093d1-c68d-41e0-9454-5b649749bbcd" />
+
+
+**Sivu ei lataudu**
+
+
+<img width="1034" height="563" alt="image" src="https://github.com/user-attachments/assets/2c253dd2-6727-48dd-9caf-f2e6d2731e9e" />
+
+
+
+**Päivitetty palomuurisääntöjä**
+
+
+<img width="706" height="271" alt="image" src="https://github.com/user-attachments/assets/ccf01c06-b590-4ad7-9850-feed484f6ebc" />
+
+
+
+<img width="705" height="773" alt="image" src="https://github.com/user-attachments/assets/5b7aef34-12e9-4f32-b7d7-80997dfff7a6" />
+
+
+
+**Johan alkoi näkyä... :)**
+
+
+<img width="1046" height="831" alt="image" src="https://github.com/user-attachments/assets/729759db-32e0-460d-a6d3-1d3b108e165f" />
+
+
+
+
+
 # d) Vapaaehtoinen: Laita omalle julkiselle palvelimellesi uusi Name Based Virtual Host. Kun sammutat muut weppisivut, niin se ainut näkyy nimestä riippumatta etusivulla. Name Based Virtual Host avulla pääset muokkaamaan kotisivuja normaalilla käyttäjällä, ilman sudoa.
