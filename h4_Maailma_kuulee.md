@@ -6,6 +6,9 @@
 - Kuvauksessaan palvelimen vuokrauksesta ja asennuksesta Susanna kertoo hankkineensa palvelimen DigitalOceanilta ja domainnimen Namecheapilta
 - Palvelimen vuokra DigitalOceanilta eteni raportin mukaan loogisesti valitsemalla halutut speksit (mm. Sijainti -> Amsterdam, joka oli vaihtoehdoista lähimpänä Helsinkiä) ja syöttämällä omat maksutiedot
 - Alkutoimien jälkeen virtuaalipalvelin oli valmis ja Susanna sai palvelimensa IP-osoitteen tietoon
+- Kaikkiaan palvlimen käyttöönotto vaikutti käyneen varsin saumattomasti
+  
+  
 
 -  Domainnimen varaus on käynyt näemmä helposti tarkistamalla palvelusta nimen saatavuus ja valitsemalla itselle sopiva domainnimi
 -  Opiskelijana hän sai domainnimen ilmaiseksi (!)
@@ -63,7 +66,9 @@ Toisen terminaalin avaaminen uudestaan + SSH-yhteyden muodostaminen pääkäytt�
 Tietoturvapäivitysten asentaminen
 
 > $ sudo apt-get update
+
 > $ sudo apt-get upgrade
+
 > $ sudo apt-get dist-upgrade
 
 Apache-webbi-palvelimen asennus
