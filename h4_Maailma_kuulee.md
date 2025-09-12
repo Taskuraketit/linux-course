@@ -89,6 +89,15 @@ Userdir-moduulin käyttöönotto ja webbipalvelimen uudelleenkäynnistys
 > $ sudo a2enmod userdir
 > $ sudo service apache2 restart
 
+Käyttäjälle julkisen kansion public_html luonti omaan kotihakemistoon + varmistus, että julkinen kansio näkyi halutussa kansiossa. 
+
+SSH-yhteyden avaus ja micron asennus
+
+> $ sudo systemctl start ssh
+> $ sudo apt-get install micro
+
+Kotihakemistoon porautuminen ja S
+
 ### f) Palvelimen ohjelmien päivitys
 
 ## Karvinen 2012: First Steps on a New Virtual Private Server – an Example on DigitalOcean and Ubuntu 16.04 LTS
