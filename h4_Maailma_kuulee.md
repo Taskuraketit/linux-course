@@ -319,6 +319,17 @@ Päivitykset komennoilla:
 <img width="1046" height="831" alt="image" src="https://github.com/user-attachments/assets/729759db-32e0-460d-a6d3-1d3b108e165f" />
 
 
+**Muokataan nettisivut. Lähdin liikkeelle tekemällä varmuuskopion alkuperäisestä tiedostosta**
+
+
+<img width="952" height="645" alt="image" src="https://github.com/user-attachments/assets/40900f82-b2d6-46ef-aeb8-7c3bee959d9b" />
+
+
+**Testataan miltä tällaiset sivut näyttäisivät**
+
+
+<img width="1012" height="601" alt="image" src="https://github.com/user-attachments/assets/8aaae8bb-a6b6-4d0f-8edc-4a79bc53d032" />
+
 
 
 
