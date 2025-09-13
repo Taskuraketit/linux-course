@@ -388,3 +388,14 @@ Päivitykset komennoilla:
 <img width="759" height="229" alt="image" src="https://github.com/user-attachments/assets/02d8d06a-a9e6-443b-9987-b2aa6eab9eea" />
 
 
+# Lähteet
+
+**Heinonen, J. 2025.** linux-03092025.md. Luettavissa: https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-03092025.md. Luettu: 12.9.2025
+
+**Karvinen, T. 2017.** First Steps on a New Virtual Private Server – an Example on DigitalOcean and Ubuntu 16.04 LTS. Luettavissa: https://terokarvinen.com/2017/first-steps-on-a-new-virtual-private-server-an-example-on-digitalocean/. Luettu: 11.9.2025
+
+**Lehto, S. 2022.** Teoriasta käytäntöön pilvipalvelimen avulla (h4). Luettavissa: https://susannalehto.fi/2022/teoriasta-kaytantoon-pilvipalvelimen-avulla-h4/. Luettu: 12.9.2025
+
+**UpCloud. 2025.** Luettavissa: https://hub.upcloud.com/. Luettu: 10.9.2025
+
+
