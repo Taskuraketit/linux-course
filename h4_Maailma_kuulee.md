@@ -331,6 +331,60 @@ Päivitykset komennoilla:
 <img width="1012" height="601" alt="image" src="https://github.com/user-attachments/assets/8aaae8bb-a6b6-4d0f-8edc-4a79bc53d032" />
 
 
+**...ja sehän näyttää aika hauskalta:D**
+
+
+<img width="1282" height="827" alt="image" src="https://github.com/user-attachments/assets/286a5085-2890-4962-8e25-40e7bb5858c1" />
+
+
+**Tältä sivu näyttää puhelimellani (iPhone 12)**
+
+
+<img width="387" height="824" alt="image" src="https://github.com/user-attachments/assets/04dbbe76-ecb2-4118-8251-82d326e84782" />
 
 
 # d) Vapaaehtoinen: Laita omalle julkiselle palvelimellesi uusi Name Based Virtual Host. Kun sammutat muut weppisivut, niin se ainut näkyy nimestä riippumatta etusivulla. Name Based Virtual Host avulla pääset muokkaamaan kotisivuja normaalilla käyttäjällä, ilman sudoa.
+
+
+**Hosts-tiedoston muokkaus**
+
+
+<img width="1279" height="800" alt="image" src="https://github.com/user-attachments/assets/f65e6a80-a4fe-49e9-8e66-c0f8b5b745fd" />
+
+
+<img width="755" height="148" alt="image" src="https://github.com/user-attachments/assets/7960a551-592c-4286-94b4-0f029ed4943a" />
+
+
+**Kopioidaan aiemmin luotu nettisivutiedosto uuteen sijaintiin**
+
+
+<img width="917" height="126" alt="image" src="https://github.com/user-attachments/assets/968563a3-a730-400b-9eb2-727d850b9ea7" />
+
+
+**Luodaan konfiguraatiotiedosto**
+
+
+<img width="820" height="31" alt="image" src="https://github.com/user-attachments/assets/44974355-d305-461e-8e65-38d235b1b929" />
+
+
+<img width="758" height="378" alt="image" src="https://github.com/user-attachments/assets/d7a6828e-a5d5-4981-8e0a-74bae7d5922a" />
+
+
+**Aiemmin luodun nettisivun kopiointi uuteen sijaintiin, tällä kertaa oikein...?**
+
+
+<img width="912" height="162" alt="image" src="https://github.com/user-attachments/assets/65c2f7ab-0eef-48e4-8f91-7fe46e99549b" />
+
+
+**Tehdään tarvittavat testit**
+
+
+<img width="768" height="191" alt="image" src="https://github.com/user-attachments/assets/c666f863-8722-4e24-a04a-1e89cebf111f" />
+
+
+**Jaaha, jotain meni pieleen... korjaan jossain vaiheessa!**
+
+
+<img width="759" height="229" alt="image" src="https://github.com/user-attachments/assets/02d8d06a-a9e6-443b-9987-b2aa6eab9eea" />
+
+
