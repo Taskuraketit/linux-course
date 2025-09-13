@@ -388,6 +388,21 @@ Päivitykset komennoilla:
 <img width="759" height="229" alt="image" src="https://github.com/user-attachments/assets/02d8d06a-a9e6-443b-9987-b2aa6eab9eea" />
 
 
+**Poistetaan muut sivut käytöstä**
+
+
+<img width="640" height="160" alt="image" src="https://github.com/user-attachments/assets/68e8fc43-6cff-4f40-8b86-6898dbd6df0a" />
+
+**Ei näköjään auttanut...**
+
+
+<img width="804" height="274" alt="image" src="https://github.com/user-attachments/assets/6c2276b0-dfa6-497a-ae19-937ea0acefd0" />
+
+
+<img width="1028" height="643" alt="image" src="https://github.com/user-attachments/assets/824edfc0-4537-4046-b09b-33941ad30129" />
+
+
+
 # Lähteet
 
 **Heinonen, J. 2025.** linux-03092025.md. Luettavissa: https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-03092025.md. Luettu: 12.9.2025
