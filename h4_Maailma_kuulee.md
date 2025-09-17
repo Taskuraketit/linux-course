@@ -414,6 +414,19 @@ Käynnistin web-palvelimen uudelleen komennolla
 
 <img width="498" height="62" alt="image" src="https://github.com/user-attachments/assets/260d0c11-e29c-403f-866d-391a766dd0fd" />
 
+Kopioin index.html-tiedoston normikäyttäjänä ja nimesin alkuperäisen tiedoston uudelleen, jonka jälkeen nimesin normikäyttäjänä kopioidun tiedostn index.html:ksi, jotta se ei ole rootin omistama. Tämän jälkeen käynnistin apachen uudestaan komennolla
+
+> sudo systemctl reload apache2
+
+<img width="766" height="588" alt="image" src="https://github.com/user-attachments/assets/e476ee9d-0d64-4506-8374-64f9d2f356db" />
+
+Syöttämällä selaimen osoitekertaan 'murukoira.com' sivua ei näy...
+
+<img width="1031" height="628" alt="image" src="https://github.com/user-attachments/assets/b5651f4b-a6f5-4a3d-9c9d-57520a978cef" />
+
+Sen sijaan IP-osoitteen syöttämällä sivu tulee näkymään...
+
+<img width="978" height="472" alt="image" src="https://github.com/user-attachments/assets/6c2cbc39-1f51-42ab-bea0-c4fa8112656c" />
 
 
 # Lähteet
