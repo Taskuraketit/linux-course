@@ -401,6 +401,19 @@ Päivitykset komennoilla:
 
 <img width="1028" height="643" alt="image" src="https://github.com/user-attachments/assets/824edfc0-4537-4046-b09b-33941ad30129" />
 
+## Ongelmanselvityksen jatko...
+
+Luennolla 17.9.2025 kysyin opettaja Tero Karviselta apua ja sain vinkiksi että ongelmana on conf-tiedoston (?) omistajuus: sen omistaa root, koska kopioin sen sudo-komennolla. Huomasin myös itse, että minulla oli conf-tiedostossa kirjoitusvirhe DocumentRoot-rivillä: 
+
+<img width="701" height="341" alt="image" src="https://github.com/user-attachments/assets/f3806112-fab3-4d4e-8ed6-c7a7cc46ab59" />
+
+
+Käynnistin web-palvelimen uudelleen komennolla
+
+> sudo systemctl reload apache2
+
+<img width="498" height="62" alt="image" src="https://github.com/user-attachments/assets/260d0c11-e29c-403f-866d-391a766dd0fd" />
+
 
 
 # Lähteet
