@@ -4,35 +4,51 @@
 
 Tätä tehtävää varten päätin hankkia oman domainnimen NameCheapilta. Aluksi menin osoitteeseen www.namecheap.com ja loin itselleni tunnukset palveluun. Tämän jälkeen hain hakutyökalulla minkälaisia domainnimiä olisi tarjolla. Ensisijaisesti haluamani domain toropainen.com on varattu joten päätin ottaa opettajan suositteleman etunimisukunii.com-osoitteen.
 
+
 <img width="1322" height="707" alt="image" src="https://github.com/user-attachments/assets/e7b0d84f-bdfc-43ca-895c-13cc660d38d1" />
+
 
 Vertailun vuoksi: eri päätteillä hintaerot ovat todella suuria, tässä muutaia esimerkkejä:
 
+
 <img width="1325" height="665" alt="image" src="https://github.com/user-attachments/assets/771c8985-9655-427c-95f6-1efc7769732b" />
+
 
 Etenin seuraavilla valinnoilla ilman mitään ylimääräisiä härpäkkeitä: 
 
+
 <img width="1293" height="856" alt="image" src="https://github.com/user-attachments/assets/a17f9d88-9268-404d-8a98-79758ad7950a" />
+
 
 Seuraavalla sivulla syötin yhteystietoni:
 
+
 <img width="1252" height="570" alt="image" src="https://github.com/user-attachments/assets/eb0a8d1a-9d06-4ed8-9f15-8c243ec460ef" />
+
 
 Seuraavalla sivulla valitsin, että olen itse sivuston hallinnollinen, tekninen ja laskutukseen liittyvä yhteyshenkilö.
 
+
 <img width="1275" height="373" alt="image" src="https://github.com/user-attachments/assets/5bdf5496-0be3-43b0-b169-e2caee95ed73" />
+
 
 Sivun alalaidassa valitsin seuraavasti: 
 
+
 <img width="1266" height="661" alt="image" src="https://github.com/user-attachments/assets/c673f2b8-4d6b-485f-a7d5-350e7080ba80" />
 
-Seuraavalle sivulle syötin maksukortin tiedot ja valitsin, että domainnimeä **ei uusita** automaattisesti. Valintani perustuu siihen, että halusin ostaa domainnimen lähinnä oppimismielessä enkä todellisuudessa tiedä mitä tulen Linux-palvelimella tai domainnimellä tekeään.
+
+Seuraavalle sivulle syötin maksukortin tiedot ja valitsin, että domainnimeä **ei uusita** automaattisesti. Valintani perustuu siihen, että halusin ostaa domainnimen lähinnä oppimismielessä enkä todellisuudessa tiedä mitä tulen Linux-palvelimella tai domainnimellä tekemään.
+
 
 <img width="1261" height="512" alt="image" src="https://github.com/user-attachments/assets/6686a389-69b9-4649-a72b-e2a52a1fd69d" />
 
+
 Kas näin, maksu suoritettu!
 
+
 <img width="1356" height="666" alt="image" src="https://github.com/user-attachments/assets/95aaf58d-e5f3-424d-a2ed-182aaea77bf5" />
+
 
 
 # b) Based. Laita Name Based Virtual Host näkymään uudessa nimessäsi. Kotisvuja pitää pystyä muokkaamaan ilman pääkäyttäjän oikeuksia.
