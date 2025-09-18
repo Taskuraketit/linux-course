@@ -50,6 +50,49 @@ Kas näin, maksu suoritettu!
 <img width="1356" height="666" alt="image" src="https://github.com/user-attachments/assets/95aaf58d-e5f3-424d-a2ed-182aaea77bf5" />
 
 
+Seuraavaksi menin Domain list -sivulle ja valitsin "Advanced DNS". Poistin oletusrivit ja lisäsin kaksi uutta A-tietuetta (A Record) ja laitoin molemmmat osoittamaan virtuaalipalvelimeeni. TTL:ksi valitsin 5 minuuttia. Lopuksi tallensin muutokset.
+
+
+<img width="1414" height="767" alt="image" src="https://github.com/user-attachments/assets/b9736dac-98e7-48e2-8411-744d5f27812e" />
+
+
+Tämän tehtyäni kirjauduin terminaalin kautta virtuaalipalvelimelleni ja yllätyksekseni ikkunaan tuli ilmoitus fingerprintistä. Valitsin "yes" ja syötin salasanani
+
+
+<img width="953" height="308" alt="image" src="https://github.com/user-attachments/assets/ee469b54-84e9-4091-9359-9560df2c7750" />
+
+
+Seuraavaksi kokeilin pingata domainnimeäni
+
+> ping samulitoropainen.com
+
+
+<img width="799" height="387" alt="image" src="https://github.com/user-attachments/assets/ec917b33-a797-403a-acb1-e05fec572036" />
+
+
+...ja huomasin, että se pingaa takaisin (jes!), mutta ilmoittaa osoitteeksi murukoira.com, jonka olin aiemmassa vaiheessa laittanut config-fileen. Pysäytin ping-komennon painamalla ctrl + C.
+
+
+Menin muokkaamaan /etc/apache2/sites-available-kansiossa olevaa conf-tiedostoa. Aloitin ottamalla siitä varmuuskopion (jossa onnistuin muutaman typottamisen jälkeen)
+
+> sudo cp murukoira.com.conf murukoira.com.conf.orig
+
+
+Nimesin tiedoston uudelleen
+
+> sudo mv murukoira.com.conf samulitoropainen.com.conf
+
+
+<img width="1018" height="246" alt="image" src="https://github.com/user-attachments/assets/8c4ac64e-7a1d-40c6-9e72-7f8d5c164b16" />
+
+
+Muokkasin config-tiedostoon kohdat ServerName, ServerAlias sekä lokitiedostojen nimet.
+
+
+<img width="1286" height="805" alt="image" src="https://github.com/user-attachments/assets/550237d9-7be8-4dac-b5c5-a792a45284b7" />
+
+
+
 
 # b) Based. Laita Name Based Virtual Host näkymään uudessa nimessäsi. Kotisvuja pitää pystyä muokkaamaan ilman pääkäyttäjän oikeuksia.
 
