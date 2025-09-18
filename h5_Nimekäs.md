@@ -92,6 +92,113 @@ Muokkasin config-tiedostoon kohdat ServerName, ServerAlias sekä lokitiedostojen
 <img width="1286" height="805" alt="image" src="https://github.com/user-attachments/assets/550237d9-7be8-4dac-b5c5-a792a45284b7" />
 
 
+Tämän jälkeen pingaamalla terminaalissa 'samulitoropainen.com' tuli edelleen näkyviin aiemmin laittamani osoite murukoira.com. Tilanne ei muuttunut käynnistämällä webbipalvelin uudelleen.
+
+> ping samulitoropainen.com
+
+> sudo systemctl reload apache2
+
+> ping samulitoropainen.com
+
+
+<img width="812" height="506" alt="image" src="https://github.com/user-attachments/assets/a8d72556-dba6-4e68-8256-d2fcf4847a8b" />
+
+
+Microsoft Copilotin avulla onnistuin paikantamaan, että tieto tulee **/etc/hosts-tiedostosta** joten avasin sen
+
+> micro /etc/hosts
+
+
+<img width="729" height="143" alt="image" src="https://github.com/user-attachments/assets/674ea5d2-f466-47d2-94b3-c4f3c4ff5106" />
+
+
+
+...ja muokkasin tiedostoon oikeat tiedot (eli murukoira.comin tilalle samulitoropainen.com).
+
+
+<img width="739" height="165" alt="image" src="https://github.com/user-attachments/assets/f223b907-8107-4c94-938c-86add8f07591" />
+
+
+Tämän jälkeen pingaamisessakin alkoi näkyä oikea osoite :)
+
+
+<img width="864" height="233" alt="image" src="https://github.com/user-attachments/assets/b8845a72-3c22-42e1-9d06-df1ad807e3ab" />
+
+
+Seuraavaksi halusin muokata nettisivua hieman tarkoituksenmukaisemmaksi. Navigoin /var/www/html-kansioon ja otin varmuuskopion aiemmasta tiedostosta ja muokkasin index.html-tiedostoa.
+
+
+<img width="748" height="265" alt="image" src="https://github.com/user-attachments/assets/71d08666-9a9c-45c0-8f6d-813e115ffa10" />
+
+
+<img width="1251" height="696" alt="image" src="https://github.com/user-attachments/assets/59a0a946-5bc8-4c0b-9165-24203e02b7e3" />
+
+
+Lopputulos:
+
+
+<img width="1295" height="491" alt="image" src="https://github.com/user-attachments/assets/ceead934-ce8b-4b5c-a59d-b1f6ad206902" />
+
+
+
+Hetken selvittelyn jälkeen hoksasin, että conf-tiedostossani on väärä kansiopolku. Luomani index.html sijaitsee sijainnissa /var/www/html, joten päivitin tämän tiedostoon.
+
+
+Lähtötilanne:
+
+
+<img width="786" height="385" alt="image" src="https://github.com/user-attachments/assets/2ea6f150-9d26-4226-a696-a5783404faca" />
+
+
+Muokkauksen jälkeen:
+
+
+<img width="779" height="394" alt="image" src="https://github.com/user-attachments/assets/8972af94-a302-4c2d-8ad5-48c2ae57a00b" />
+
+
+Tämän jälkeen käynnistin Apachen uudelleen
+
+> sudo systemctl reload apache2
+
+
+<img width="787" height="111" alt="image" src="https://github.com/user-attachments/assets/f7892c2e-25b7-4825-80fc-d738ebe78bc0" />
+
+
+
+Kaiken tämän jälkeen osoite samulitoropainen.com vie edelleen vanhalle sivulle.
+
+
+<img width="988" height="429" alt="image" src="https://github.com/user-attachments/assets/1f4964a7-08f0-4535-8e54-c17dc30e46d6" />
+
+
+
+Kokeillaanpa kommentoida hosts-tiedostosta rivit pois josko se sotkisi nimipalvelua... eli risuaidat rivien alkuun:
+
+
+<img width="785" height="181" alt="image" src="https://github.com/user-attachments/assets/91b3e36b-0017-49d3-b181-c78cc4b0e461" />
+
+
+Curlilla testatessa alkaa jo näyttää oikealta:
+
+> curl http://samulitoropainen.com
+
+
+<img width="1295" height="699" alt="image" src="https://github.com/user-attachments/assets/71676b65-24cf-4fa8-ae73-b87e2f214b63" />
+
+
+Tässä kohtaa vilkaisin lokitiedostoja ja löysinkin jotain yllättävää - joku (kenties botti) on pommittanut serveriäni ja saanut useita virheilmoituksia. Siispä Copilotin ohjeen mukaan estin kyseisen IP-osoitteen komennolla
+
+> sudo iptables -A INPUT -s 45.88.186.32 -j DROP
+
+<img width="1280" height="667" alt="image" src="https://github.com/user-attachments/assets/fb812d34-4f5d-488b-bc61-56570deb5340" />
+
+
+Seuraavaksi tarkistin whatismyipaddress.com-palvelussa kyseisen IP-osoitteen sijainnin ja se paikallistui Saksaan:
+
+
+<img width="1513" height="834" alt="image" src="https://github.com/user-attachments/assets/a2f5f783-5cef-4b05-91e2-35dedab4d441" />
+
+
 
 
 # b) Based. Laita Name Based Virtual Host näkymään uudessa nimessäsi. Kotisvuja pitää pystyä muokkaamaan ilman pääkäyttäjän oikeuksia.
