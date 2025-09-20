@@ -2,7 +2,7 @@
 
 # a) Nimi. Laita julkinen nimi osoittamaan omaan koneeseesi. (Siis vastaava kuin terokarvinen.com. Nimen saattaa saada myös ilmaiseksi Github Education -paketilla. Suosittelen hankkimaan oikean nimen, mutta jos välttämättä haluat, voit myös simuloida nimen toimintaa paikallisesti hosts-tiedoston avulla.)
 
-Tätä tehtävää varten päätin hankkia oman domainnimen NameCheapilta. Aluksi menin osoitteeseen www.namecheap.com ja loin itselleni tunnukset palveluun. Tämän jälkeen hain hakutyökalulla minkälaisia domainnimiä olisi tarjolla. Ensisijaisesti haluamani domain toropainen.com on varattu joten päätin ottaa opettajan suositteleman etunimisukunii.com-osoitteen.
+Tätä tehtävää varten päätin hankkia oman domainnimen NameCheapilta. Aluksi menin osoitteeseen www.namecheap.com ja loin itselleni tunnukset palveluun. Tämän jälkeen hain hakutyökalulla minkälaisia domainnimiä olisi tarjolla. Ensisijaisesti haluamani domain toropainen.com on varattu joten päätin ottaa opettajan suositteleman etunimisukunimi.com-muotoisen osoitteen.
 
 
 <img width="1322" height="707" alt="image" src="https://github.com/user-attachments/assets/e7b0d84f-bdfc-43ca-895c-13cc660d38d1" />
