@@ -421,11 +421,13 @@ Lisäsin Namecheap.comissa A Recordin, jolle laitoin Hostiksi 'vadelma', IP-osoi
 Molemmat alidomainit alkoivat heti toimia (ks. selaimen osoiterivi):
 
 
+
 <img width="1282" height="473" alt="image" src="https://github.com/user-attachments/assets/eb691e92-8efa-4d20-8d8f-6022ed762786" />
 
 
+ 
 <img width="1285" height="477" alt="image" src="https://github.com/user-attachments/assets/05fc2404-a20e-49ac-9b86-05f551871b05" />
-
+ 
 
 
 # e) Tutki jonkin nimen DNS-tietoja 'host' ja 'dig' -komennoilla. Käytä kumpaakin komentoa kaikkiin nimiin ja vertaa tuloksia. Katso man-sivulta, miten komennot toimivat - esimerkiksi miten 'dig' näyttää kaikki kentät. Analysoi tulokset, keskity nimipalvelimelta tulleisiin kenttiin (dig näyttää paljon muutakin tietoa). Etsi tarvittaessa uusia lähteitä haastaviin kohtiin. Sähköpostin todentamiseen liittyvät SPF ja DMARC -tietojen yksityiskohdat on jätetty vapaaehtoiseksi lisätehtäväksi. Tutkittavat nimet:
@@ -469,17 +471,42 @@ Syötin komentoriville komennot
 <img width="718" height="562" alt="image" src="https://github.com/user-attachments/assets/7b273177-153b-481b-b4be-241f4d184276" />
 
 
-
-
 ## Jonkin suuren ja kaikkien tunteman palvelun tiedot.
 
 
+Syötin komentoriville komennot
+
+> $ host microsoft.com
+>
+> $ dig microsoft.om
+
+
+...ja sain seuraavat tulokset:
+
+
+<img width="1286" height="657" alt="image" src="https://github.com/user-attachments/assets/5991b6ef-6e0f-4f9a-bdcc-547d34d4c0dd" />
+
+
+
+**Tulosten vertailua**
+
+- Kaikkien kolmen domainin kyselyt onnistuivat (status-kohdassa luki 'NOERROR')
+- flags-kohdassa kaikilla kolmella sivulla oli tuloksena 'qr rd ra', jotka tarkoittavat
+  - qr = query response (kyselyn vastaus)
+  - rd = recursion desired (kysely pyysi rekursiota)
+  - ra = recursion available (palvelin tarjosi rekursion)
+
+
 # f) Vapaaehtoinen bonus: Aakkossalaattia sähköpostiin. Etsi palvelu, jonka DNS-tiedoissa on SPF ja DMARC. Selitä näiden kenttien osat ja vaikutukset yksityiskohtaisesti. Voit halutessasi käyttää tulkinnan apuna jotain ohjelmaa tai palvelua, kunhan selität ja tulkitset lopputuloksen myös itse.
+ 
 
 # Lähteet:
 
 - **Karvinen, T.** Linux Palvelimet 2025 alkusyksy. Luettavissa: https://terokarvinen.com/linux-palvelimet/. Luettu: 18.9.2025.
 - **Namecheap.** Luettavissa: https://www.namecheap.com/. Luettu: 18.9.2025.
+- **ServerFault.** What are all the flags in a dig response? Luettavissa: https://serverfault.com/questions/729025/what-are-all-the-flags-in-a-dig-response. Luettu: 20.9.2025.
 - **WhatIsMyIPADdress.** Luettavissa: https://whatismyipaddress.com/. Luettu: 18.9.2025.
 - **W3Schools.com.** HTML Tutorial. Luettavissa: https://www.w3schools.com/html/. Luettu: 20.9.2025.
 - **Zivanov, S.** PhoenixNAP.dig Command in Linux with Examples. Luettavissa: https://phoenixnap.com/kb/linux-dig-command-examples. Luettu: 20.9.2025.
+
+  Lisäksi käytetty Microsoft Copilotia ongelmanratkaisun tukena.
