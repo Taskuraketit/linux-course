@@ -492,20 +492,20 @@ Syötin komentoriville komennot
 
 - Kaikkien kolmen domainin kyselyt onnistuivat (status-kohdassa luki 'NOERROR')
 - flags-kohdassa kaikilla kolmella sivulla oli tuloksena 'qr rd ra', jotka tarkoittavat
- - qr = query response (kyselyn vastaus)
- - rd = recursion desired (kysely pyysi rekursiota)
- - ra = recursion available (palvelin tarjosi rekursion)
+   - qr = query response (kyselyn vastaus)
+   - rd = recursion desired (kysely pyysi rekursiota)
+   - ra = recursion available (palvelin tarjosi rekursion)
 - 'udp: 65494' kertoo, että palvelin tukee 65494 tavun kokoisia UDP-paketteja DNS-vastauksissa
 - QUESTION SECTION -osio kertoo mitä kysyttiin
- - ensimmäisenä domainnimi
- - 'IN' = internet-luokka
- - 'A' = A-tietue eli IPv4-osoite
+   - ensimmäisenä domainnimi
+   - 'IN' = internet-luokka
+   - 'A' = A-tietue eli IPv4-osoite
 - ANSWER SECTION -osio kertoo vastauksen
- - ensimmäisenä domainnimi
- - numeroarvo kertoo TTL:n (Time To Live) = aika skunteina kauanko tieto on välimuistissa
- - 'IN' = internet-luokka
- - 'A' = IPv4-osoite
- - xxx.xxx.xxx.xxx = domainin IP-osoite
+   - ensimmäisenä domainnimi
+   - numeroarvo kertoo TTL:n (Time To Live) = aika skunteina kauanko tieto on välimuistissa
+   - 'IN' = internet-luokka
+   - 'A' = IPv4-osoite
+   - xxx.xxx.xxx.xxx = domainin IP-osoite
 - query time = kyselyyn kulunut aika millisekunteina
 - 'SERVER: 127.0.0.53#53(127.0.0.53) (UDP)' -> DNS-kysely tehtiin paikalliselle resolverille
 - 'WHEN' = kyselyn ajankohta
