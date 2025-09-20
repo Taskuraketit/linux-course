@@ -217,7 +217,7 @@ Tarkistin aktiiviset jailit eli säännöt
 Loin fail2ban-konfiguraatiotiedoston
 
 
-> sudo micro /etc/fail2ban/jail.local
+> $ sudo micro /etc/fail2ban/jail.local
 
 
 Syötin konfiguraatiotiedostoon seuraavat tiedot:
@@ -238,7 +238,7 @@ Tallensin tiedoston ja suljin sen.
 Tarkistin, että jail on aktiivinen 
 
 
-> sudo fail2ban-client status apache
+> $ sudo fail2ban-client status apache
 
 
 Asetin aiemmalle hyökkääjä-IP:lle estot
@@ -251,7 +251,7 @@ Asetin aiemmalle hyökkääjä-IP:lle estot
 Tarkistin aktiiviset prosessit:
 
 
-> ps aux
+> $ ps aux
 
 
 
@@ -259,7 +259,7 @@ Tarkistin mahdolliset uudet käyttäjät
 
 
 
-> cat /etc/passwd
+> $ cat /etc/passwd
 
 
 
@@ -267,7 +267,7 @@ Tarkistin verkkoyhteydet
 
 
 
-> netstat -tulnp
+> $ netstat -tulnp
 
 
 
@@ -275,7 +275,7 @@ Tarkistin onko index.html- tai muita tiedostoja muokattu
 
 
 
-> ls -l /var/www/html
+> $ ls -l /var/www/html
 
 
 
@@ -283,11 +283,9 @@ Asensin ja ajoin rkhunter-ohjelman Rootkit-ohjelmien varalta:
 
 
 
-> sudo apt-get install rkhunter chkrootkit
-
-> sudo rkhunter --check
-
-> sudo chkrootkit
+> $ sudo apt-get install rkhunter chkrootkit
+> $ sudo rkhunter --check
+> $ sudo chkrootkit
 
 
 Rkhunterin tulokset olivat muuten puhtaat, mutta ohjelma varoitti seuraavasta:
@@ -307,14 +305,14 @@ Copilotin tulkinta:
 Tarkistin /dev-hakemiston:
 
 
-> ls -l /dev | grep -v '^c\|^b'
+> $ ls -l /dev | grep -v '^c\|^b'
 
 
 
 Tarkistin piilotetut tiedostot:
 
 
-> sudo find / -name ".*" -type f 2>/dev/null
+> $ sudo find / -name ".*" -type f 2>/dev/null
 
 
 
@@ -340,7 +338,27 @@ Ja näin sivu skaalautuu mobiililaitteella (iPhone 12):
 # b) Based. Laita Name Based Virtual Host näkymään uudessa nimessäsi. Kotisvuja pitää pystyä muokkaamaan ilman pääkäyttäjän oikeuksia.
 
 
+Tämä tuli  tehtyä jouhevasti a-kohdan yhteydessä.
+
+
 # c) Kotisivu. Tee vähintään kolmen erillisen alasivun (esim. index.html, blog.html, projects.html) kotisivu ja kopioi se näkymään palvelimellesi. Sivujen muokkaamisen pitää onnistua ilman pääkäyttäjän oikeuksia, niiden kopioiminen pääkäyttäjänä testisivun paikalle ei käy. Kotisivujen ei tarvitse olla hienoja, mutta niiden tulee olla validia HTML:ää ja linkittää toisiinsa.
+
+
+Aloitin luomalla uudet html-tiedostot samaan kansioon (/var/wwww/html) kuin missä index.html-tiedosto sijaitsee. Oikaisin hieman ja kopioin index.html:n, nimesin tiedostot uudelleen ja muokkasin niiden sisältöä.
+
+
+> $ sudo cp index.html projects.html
+> $ sudo cp index.html blog.html
+
+> $ sudo micro blog.html
+
+<img width="1284" height="827" alt="image" src="https://github.com/user-attachments/assets/6163ef0d-e296-4a88-8d01-be833c4eed7d" />
+
+
+
+
+
+
 
 
 # d) Alidomain. Tee kaksi uutta alidomainia, jotka osoittava omaan koneeseesi. Esimerkiksi palvelu on example.com -> linuxkurssi.example.com. Alidomainit ovat tyypillisesti ilmaisia, kun sinulla on päädomain (example.com). Tässä tehtävässä riittää, että alidomainit avaavat saman sivun kuin päädomain. (Vapaaehtoinen bonus: Tee toinen alidomain A-tietueella ja toinen CNAME-tietueella. Vapaaehtoinen bonus: tee alidomainiin oma erillinen name based virtual host.)
