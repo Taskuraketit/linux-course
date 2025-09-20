@@ -432,9 +432,54 @@ Molemmat alidomainit alkoivat heti toimia (ks. selaimen osoiterivi):
 
 ## Oma domain-nimesi. Vertaa tuloksia nimen vuokraajan (namecheap.com, name.com...) weppiliittymässä näkyviin asetuksiin.
 
+Syötin komentiriville komennot 'host samulitoropainen.com' ja 'dig samulitoropainen.com', mutta sain ilmoituksen "command not dound". Siispä asensin dnsutils-paketin, joka sisältää sekä dig- että host-komennot (tämän vinkin sain Copilotilta).
+
+> $ sudo apt-get update
+>
+> $ sudo apt-get install -y dnsutils
+
+<img width="1290" height="802" alt="image" src="https://github.com/user-attachments/assets/329b2f5c-5dff-4265-8e59-b06482f867b1" />
+
+
+Syötin uudelleen komennot
+
+> $ host samulitoropainen.com
+>
+> $ dig samulitoropainen.com
+
+...ja sain seuraavat tulokset:
+
+
+<img width="1285" height="639" alt="image" src="https://github.com/user-attachments/assets/a55e8d41-b1e4-4c35-92ff-4bd15e085d97" />
+
+
 ## Jonkin pikkuyrityksen, kerhon tai yksittäisen henkilön weppisivut. (Ei kuitenkaan kurssikaverin tällä viikolla vuokrattua nimeä).
+
+
+Syötin komentoriville komennot
+
+> $ host terokarvinen.com
+>
+> $ dig terokarvinen.com
+
+
+...ja sain seuraavat tulokset:
+
+
+<img width="718" height="562" alt="image" src="https://github.com/user-attachments/assets/7b273177-153b-481b-b4be-241f4d184276" />
+
+
+
 
 ## Jonkin suuren ja kaikkien tunteman palvelun tiedot.
 
 
 # f) Vapaaehtoinen bonus: Aakkossalaattia sähköpostiin. Etsi palvelu, jonka DNS-tiedoissa on SPF ja DMARC. Selitä näiden kenttien osat ja vaikutukset yksityiskohtaisesti. Voit halutessasi käyttää tulkinnan apuna jotain ohjelmaa tai palvelua, kunhan selität ja tulkitset lopputuloksen myös itse.
+
+# Lähteet:
+
+- **Karvinen, T.** Linux Palvelimet 2025 alkusyksy. Luettavissa: https://terokarvinen.com/linux-palvelimet/. Luettu: 18.9.2025.
+- **Namecheap.** Luettavissa: https://www.namecheap.com/. Luettu: 18.9.2025.
+- **WhatIsMyIPADdress.** Luettavissa: https://whatismyipaddress.com/. Luettu: 18.9.2025.
+- **W3Schools.com.** HTML Tutorial. Luettavissa: https://www.w3schools.com/html/. Luettu: 20.9.2025.
+- **Zivanov, S.** PhoenixNAP.dig Command in Linux with Examples. Luettavissa: https://phoenixnap.com/kb/linux-dig-command-examples. Luettu: 20.9.2025.
