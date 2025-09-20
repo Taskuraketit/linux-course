@@ -199,6 +199,142 @@ Seuraavaksi tarkistin whatismyipaddress.com-palvelussa kyseisen IP-osoitteen sij
 <img width="1513" height="834" alt="image" src="https://github.com/user-attachments/assets/a2f5f783-5cef-4b05-91e2-35dedab4d441" />
 
 
+Tämän jälkeen jatkoin selvitystä Copilotin avustuksella seuraavasti:
+
+
+Tarkistin fail2banin (ohjelman, joka suojaa palvelinta bruteforce- ja bot-hyökkäyksiltä)
+
+
+> $ sudo systemctl status fail2ban
+
+
+Tarkistin aktiiviset jailit eli säännöt
+
+
+> $ sudo fail2ban-client status
+
+
+Loin fail2ban-konfiguraatiotiedoston
+
+
+> sudo micro /etc/fail2ban/jail.local
+
+
+Syötin konfiguraatiotiedostoon seuraavat tiedot:
+
+
+
+*[apache]*
+*enabled = true*
+*port    = http,https*
+*filter  = apache-auth*
+*logpath = /var/log/apache2/access.log*
+*maxretry = 5*
+*bantime = 3600*
+
+Tallensin tiedoston ja suljin sen.
+
+
+Tarkistin, että jail on aktiivinen 
+
+
+> sudo fail2ban-client status apache
+
+
+Asetin aiemmalle hyökkääjä-IP:lle estot
+
+
+> $ sudo fail2ban-client set apache banip 45.88.186.32
+
+
+
+Tarkistin aktiiviset prosessit:
+
+
+> ps aux
+
+
+
+Tarkistin mahdolliset uudet käyttäjät
+
+
+
+> cat /etc/passwd
+
+
+
+Tarkistin verkkoyhteydet
+
+
+
+> netstat -tulnp
+
+
+
+Tarkistin onko index.html- tai muita tiedostoja muokattu
+
+
+
+> ls -l /var/www/html
+
+
+
+Asensin ja ajoin rkhunter-ohjelman Rootkit-ohjelmien varalta:
+
+
+
+> sudo apt-get install rkhunter chkrootkit
+
+> sudo rkhunter --check
+
+> sudo chkrootkit
+
+
+Rkhunterin tulokset olivat muuten puhtaat, mutta ohjelma varoitti seuraavasta:
+
+
+<img width="550" height="52" alt="image" src="https://github.com/user-attachments/assets/c0d4a68f-3b93-4be1-9844-f296e98744ed" />
+
+
+
+Copilotin tulkinta: 
+
+
+<img width="634" height="266" alt="image" src="https://github.com/user-attachments/assets/b278898e-c64d-42f3-8478-6c059aeaaa60" />
+
+
+
+Tarkistin /dev-hakemiston:
+
+
+> ls -l /dev | grep -v '^c\|^b'
+
+
+
+Tarkistin piilotetut tiedostot:
+
+
+> sudo find / -name ".*" -type f 2>/dev/null
+
+
+
+Mitään epäilyttävää ei löytynyt joten tulkitsin tämän **false positive -tilanteeksi**.
+
+
+
+Tässä kohtaa menin uudelleen katsomaan samulitoropainen.com-sivua ja yllätyksekseni se oli päivittyyt oikeanlaiseksi eli TTL oli ilmeisesti jostain syystä pidempi kuin NameCheap.com-sivulle asettamani 5 minuuttia.
+
+
+
+<img width="1281" height="885" alt="image" src="https://github.com/user-attachments/assets/842b211f-ca7b-4e4d-8e24-d632a7397b73" />
+
+
+
+Ja näin sivu skaalautuu mobiililaitteella (iPhone 12):
+
+
+<img width="1170" height="2532" alt="image" src="https://github.com/user-attachments/assets/b8efd28f-7dd5-42c8-88a2-0d7f396df361" />
+
 
 
 # b) Based. Laita Name Based Virtual Host näkymään uudessa nimessäsi. Kotisvuja pitää pystyä muokkaamaan ilman pääkäyttäjän oikeuksia.
