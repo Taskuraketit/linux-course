@@ -395,9 +395,37 @@ Lähtötilanne:
 <img width="1288" height="480" alt="image" src="https://github.com/user-attachments/assets/5f142f5c-5f26-4a20-8b4a-d74778a591ef" />
 
 
+Ratkaisu: </header>-osion siirto varsinaisen header-osion alle ennen navigaattoria
+
+
+<img width="1009" height="432" alt="image" src="https://github.com/user-attachments/assets/9ab2701a-9c84-459e-8f04-1475d51443f1" />
+
+
+Nyt navigaattori näkyy oikein jokaisella kolmella sivulla :) Käytännössä jos olisin tekemässä vakavissani nettisivuja, tekisin header-osioon erilliset painikkeet yhteensopivalla värimaailmalla, mutta tässä tapauksessa tyydyn siihen, että sivut toimivat teknisesti siten mmiten kuuluukin.
+
+
+<img width="1281" height="466" alt="image" src="https://github.com/user-attachments/assets/36114cca-bac8-48a4-a432-836686720351" />
+
+
 
 
 # d) Alidomain. Tee kaksi uutta alidomainia, jotka osoittava omaan koneeseesi. Esimerkiksi palvelu on example.com -> linuxkurssi.example.com. Alidomainit ovat tyypillisesti ilmaisia, kun sinulla on päädomain (example.com). Tässä tehtävässä riittää, että alidomainit avaavat saman sivun kuin päädomain. (Vapaaehtoinen bonus: Tee toinen alidomain A-tietueella ja toinen CNAME-tietueella. Vapaaehtoinen bonus: tee alidomainiin oma erillinen name based virtual host.)
+
+
+Lisäsin Namecheap.comissa A Recordin, jolle laitoin Hostiksi 'vadelma', IP-osoitteeksi palvelimen IP-osoitteen ja TTL:ksi 5 minuuttia. Lisäsin myös CNAME Recordin, jolle laitoin Hostiksi 'mansikka' ja Value-kohtaan domainnimen 'samulitoropainen.com' ja TTL:ksi 5 minuuttia.
+
+
+<img width="1130" height="326" alt="image" src="https://github.com/user-attachments/assets/9d331bac-bc08-43a4-9030-4a27cf4d1af3" />
+
+
+Molemmat alidomainit alkoivat heti toimia (ks. selaimen osoiterivi):
+
+
+<img width="1282" height="473" alt="image" src="https://github.com/user-attachments/assets/eb691e92-8efa-4d20-8d8f-6022ed762786" />
+
+
+<img width="1285" height="477" alt="image" src="https://github.com/user-attachments/assets/05fc2404-a20e-49ac-9b86-05f551871b05" />
+
 
 
 # e) Tutki jonkin nimen DNS-tietoja 'host' ja 'dig' -komennoilla. Käytä kumpaakin komentoa kaikkiin nimiin ja vertaa tuloksia. Katso man-sivulta, miten komennot toimivat - esimerkiksi miten 'dig' näyttää kaikki kentät. Analysoi tulokset, keskity nimipalvelimelta tulleisiin kenttiin (dig näyttää paljon muutakin tietoa). Etsi tarvittaessa uusia lähteitä haastaviin kohtiin. Sähköpostin todentamiseen liittyvät SPF ja DMARC -tietojen yksityiskohdat on jätetty vapaaehtoiseksi lisätehtäväksi. Tutkittavat nimet:
