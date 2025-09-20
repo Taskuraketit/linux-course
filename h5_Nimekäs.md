@@ -331,7 +331,8 @@ Tässä kohtaa menin uudelleen katsomaan samulitoropainen.com-sivua ja yllätyks
 Ja näin sivu skaalautuu mobiililaitteella (iPhone 12):
 
 
-<img width="1170" height="2532" alt="image" src="https://github.com/user-attachments/assets/b8efd28f-7dd5-42c8-88a2-0d7f396df361" />
+<img width="398" height="861" alt="image" src="https://github.com/user-attachments/assets/83852252-6e34-4583-9b95-62547a1defbb" />
+
 
 
 
