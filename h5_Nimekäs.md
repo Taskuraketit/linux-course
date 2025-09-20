@@ -384,8 +384,15 @@ Oikaistakseni hieman poistin aiemmin luomani projects.html-tiedoston, otin kopio
 <img width="1276" height="740" alt="image" src="https://github.com/user-attachments/assets/426e3e9a-478f-4832-b704-cae316af79ea" />
 
 
+Tässä kohtaa sivuni toimivat teknisesti kuten pitää, mutta värikontrastin vuoksi muokkasin tiedostoja siten, että navigaatiopalkki näkyy samalla tavalla kuten pääsivulla:
 
 
+Lähtötilanne:
+
+<img width="1276" height="740" alt="image" src="https://github.com/user-attachments/assets/96de2bb1-832d-42b6-b385-e602c503c97a" />
+
+
+<img width="1288" height="480" alt="image" src="https://github.com/user-attachments/assets/5f142f5c-5f26-4a20-8b4a-d74778a591ef" />
 
 
 
