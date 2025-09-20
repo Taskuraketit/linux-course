@@ -345,15 +345,43 @@ Tämä tuli  tehtyä jouhevasti a-kohdan yhteydessä.
 # c) Kotisivu. Tee vähintään kolmen erillisen alasivun (esim. index.html, blog.html, projects.html) kotisivu ja kopioi se näkymään palvelimellesi. Sivujen muokkaamisen pitää onnistua ilman pääkäyttäjän oikeuksia, niiden kopioiminen pääkäyttäjänä testisivun paikalle ei käy. Kotisivujen ei tarvitse olla hienoja, mutta niiden tulee olla validia HTML:ää ja linkittää toisiinsa.
 
 
-Aloitin luomalla uudet html-tiedostot samaan kansioon (/var/wwww/html) kuin missä index.html-tiedosto sijaitsee. Oikaisin hieman ja kopioin index.html:n, nimesin tiedostot uudelleen ja muokkasin niiden sisältöä.
+Aloitin luomalla uudet html-tiedostot samaan kansioon (/var/wwww/html) kuin missä index.html-tiedosto sijaitsee. Oikaisin hieman ja kopioin index.html:n, nimesin sen uudelleen ja muokkasin sisältöä.
 
 
-> $ sudo cp index.html projects.html
 > $ sudo cp index.html blog.html
+
 
 > $ sudo micro blog.html
 
-<img width="1284" height="827" alt="image" src="https://github.com/user-attachments/assets/6163ef0d-e296-4a88-8d01-be833c4eed7d" />
+
+<img width="1264" height="746" alt="image" src="https://github.com/user-attachments/assets/cb53f41e-7014-46f6-9622-499b854fbf28" />
+
+
+
+Otin varmuuden vuoksi varmuuskopion nykyisestä index.html-tiedostosta ja muokkasin työstettävään tiedostoon vastaavan navigaatiopalkin (joka toivottavasti toimii kuten pitäisi...)
+
+
+> $ sudo cp index.html index.html.backup
+
+> $ sudo micro index.html
+
+<img width="678" height="137" alt="image" src="https://github.com/user-attachments/assets/2c3bc4c7-ff54-4136-852c-8b2c1102765f" />
+
+
+<img width="1279" height="768" alt="image" src="https://github.com/user-attachments/assets/f094307c-64ee-4505-a394-64c1dcaa3ac1" />
+
+
+Oikaistakseni hieman poistin aiemmin luomani projects.html-tiedoston, otin kopion blog.html:stä, nimesin sen uudelleen projects.html:ksi ja muokkasin sisältöä.
+
+
+> $ sudo rm projets.html
+
+> $ sudo cp blog.html projects.html
+
+<img width="763" height="315" alt="image" src="https://github.com/user-attachments/assets/be6f86aa-0dd6-4566-9f03-e3196f0b11a5" />
+
+
+<img width="1276" height="740" alt="image" src="https://github.com/user-attachments/assets/426e3e9a-478f-4832-b704-cae316af79ea" />
 
 
 
