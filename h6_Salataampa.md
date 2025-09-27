@@ -153,3 +153,113 @@ Menin osoitteeseen https://www.ssllabs.com/ssltest/ ja syötin sivun Hostname-ke
 
 
 # c) Vapaaehtoinen: Tee weppilomake, jossa on käyttäjätunnus ja salasana. Käytä salaamatonta http-yhteyttä. Sieppaa liikennettä (esim. Wireshark, ngrep). Mitä havaitset? Mitä vaikutuksia tällä on tietoturvaan?
+
+
+Loin hakemistoon /var/www/html uuden tiedoston login.html
+
+
+<img width="535" height="295" alt="image" src="https://github.com/user-attachments/assets/76e8d35b-89ad-4e94-8cf1-23de0d6f2042" />
+
+
+Tein tiedostoon html:llä yksinkertaisen kirjautumislomakkeen ja tallensin muutokset:
+
+
+<img width="601" height="362" alt="image" src="https://github.com/user-attachments/assets/f6f9e21b-7749-490d-9298-dde3abce0d8d" />
+
+
+Käynnistin uudelleen Apachen
+
+
+> $ sudo systemctl restart apache2
+
+
+<img width="655" height="46" alt="image" src="https://github.com/user-attachments/assets/fd22f4f4-3dc3-447c-b94a-c9b7dc05849d" />
+
+
+Avasin selaimessa sivun 'http://80.69.172.107/login.html' ja syötin sivulle hatusta vedetyt kirjautumistunnukset. Mielenkiintoinen havainto oli, että selainkin varoitti yhteyden salaamattomuudesta. Painoin "Kirjaudu"-painiketta.
+
+
+<img width="671" height="397" alt="image" src="https://github.com/user-attachments/assets/a59a41c2-aea2-4aa0-8e6a-6935b1cdd72c" />
+
+
+Syötin terminaalissa komennon, jolla yritin tarkastella http-liikennettä, mutta sain ilmoituksen ettei ngrep-työkalua ole asennettu joten asensin sen.
+
+
+> $ sudo ngrep -d any -q -W byline "POST" port 80
+
+<img width="784" height="38" alt="image" src="https://github.com/user-attachments/assets/3f6e914a-cc6a-489c-924e-d093d85368dd" />
+
+
+> $ sudo apt-get update
+>
+> $ sudo apt-get install -y ngrep
+
+
+<img width="924" height="683" alt="image" src="https://github.com/user-attachments/assets/837b6833-d441-4978-a60e-2ce12234aa06" />
+
+
+Syötin aiemman komennon uudelleen
+
+> $ sudo ngrep -d any -q -W byline "POST" port 80
+
+
+Tulokset eivät kuitenkaan olleet ihan sitä mitä piti:
+
+
+<img width="797" height="101" alt="image" src="https://github.com/user-attachments/assets/d3f89dd2-a16c-477e-87e6-29f8fab314ab" />
+
+
+Tarkistutin Copilotilla koodin ja se huomautti, että h2-otsikon alta puuttuu '/login' joten lisäsin sen koodiin. Lisäksi löysin apuja toisesta lähteestä ja muokkasin lomakkeen sisältöä seuraavanlaiseksi:
+
+
+<img width="620" height="400" alt="image" src="https://github.com/user-attachments/assets/dbe9dc2c-de4f-428b-a624-a2e96a41068f" />
+
+
+Käynnistin taas apachen uudestaan ja testasin kirjautumista.
+
+
+> $ sudo systemctl restart apache2
+
+
+Tällä kertaa "kirjautuminen" meni eteenpäin:
+
+
+<img width="785" height="297" alt="image" src="https://github.com/user-attachments/assets/31da44a3-0e77-498c-aaf2-214c7a8a640d" />
+
+
+Tarkistus terminaalissa:
+
+
+> $ sudo ngrep -d any -q -W byline "POST" port 80
+
+Kokeilin lomakkeen täyttöä uudelleen ja huomasin, että em. komento ilmeisesti tuottaa tuloksia reaaliajassa:
+
+
+<img width="859" height="296" alt="image" src="https://github.com/user-attachments/assets/78b00abf-3a2c-4832-b4d8-6babe4fbc016" />
+
+
+Tässä ei kuitenkaan näy kirjautumistietoja, joiden ilmeisesti pitäisi näkyä.
+
+
+Valitettavasti tässä kohtaa en ehtinyt tehdä enempää vianmääritystä tämän suhteen joten jatkan (ehkä) tehtävää myöhemmin. Joka tapauksessa voidaan todeta seuraavaa:
+
+- POST-pyynnön sisällä tietojen *pitäisi* näkyä selväkielisenä, mikä aiheuttaa ilmeisen tieoturvaongelman
+- Selväkielisyys mahdollistaa vakoilun ja tunnusten sieppaamisen
+- Selaimet eivät automaattisesti estä HTTP-yhteyttä, mutta sen käyttö on teknisesti mahdollista (onneksi ainakin virtuaalikoneella Firefox varoitti lomakkeella salaamattomuudesta)
+- Tietoturvaongelmat voivat aiheuttaa riskin tietomurrolle sekä asiakkaiden luottamuksen menettämiselle, minkä vuoksi tuotantoympäristössä tulisi aina käyttää salattua yhteyttä (HTTPS)
+
+# Lähteet:
+
+- **Karvinen, T.** Linux-palvelimet. h6 Salataampa. Luettavissa: https://terokarvinen.com/linux-palvelimet/. Luettu: 27.9.2025.
+- **Let's Encrypt**. How it works. Luettavissa: https://letsencrypt.org/how-it-works/. Luettu: 27.9.2025.
+- **Req Bin**. HTTP POST Request Method. Luettavissa: https://reqbin.com/Article/HttpPost/. Luettu: 27.9.2025.
+- **SSL Labs**. SSL Test. Luettavissa: https://www.ssllabs.com/ssltest/. Luettu: 27.9.2025.
+
+Lisäksi käytetty ongelmanratkaisun tukena ChatGPT:tä ja Copilotia.
+
+
+
+
+
+
+
