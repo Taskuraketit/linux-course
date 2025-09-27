@@ -241,6 +241,13 @@ Kokeilin lomakkeen täyttöä uudelleen ja huomasin, että em. komento ilmeisest
 Tässä ei kuitenkaan näy kirjautumistietoja, joiden ilmeisesti pitäisi näkyä.
 
 
+http-osoitteen lisäys login.html-tiedostoon ei myöskään muuttanut tilannetta eli en edelleenkään saanut kirjautumistietoja näkymään ngrepillä.
+
+
+<img width="628" height="471" alt="image" src="https://github.com/user-attachments/assets/a5786a12-2205-41e0-8f06-d3834569c3de" />
+
+
+
 Valitettavasti tässä kohtaa en ehtinyt tehdä enempää vianmääritystä tämän suhteen joten jatkan (ehkä) tehtävää myöhemmin. Joka tapauksessa voidaan todeta seuraavaa:
 
 - POST-pyynnön sisällä tietojen *pitäisi* näkyä selväkielisenä, mikä aiheuttaa ilmeisen tieoturvaongelman
