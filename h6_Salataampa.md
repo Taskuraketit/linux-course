@@ -19,17 +19,18 @@ Varmenteet ovat voimassa 90 päivää, ja ne voidaan uusia automaattisesti ennen
 
 ## The Apache Software Foundation 2025: Apache HTTP Server Version 2.4 [Official] Documentation: SSL/TLS Strong Encryption: How-To: Basic Configuration Example (Ei "Cipher Suites and Enforcing Strong Security" eteenpäin. Certbot tekee meillä automaattisesti kaikki salaukseen liittyvät asetukset.
 
-SSL-konfiguraation minimivaatimukset:
+**SSL-konfiguraation minimivaatimukset:**
 
-LoadModule ssl_module modules/mod_ssl.so
+    LoadModule ssl_module modules/mod_ssl.so
 
-Listen 443
-<VirtualHost *:443>
-    ServerName www.example.com
-    SSLEngine on
-    SSLCertificateFile "/path/to/www.example.com.cert"
-    SSLCertificateKeyFile "/path/to/www.example.com.key"
-</VirtualHost>
+    Listen 443
+    <VirtualHost *:443>
+      ServerName www.example.com
+      SSLEngine on
+      SSLCertificateFile "/path/to/www.example.com.cert"
+      SSLCertificateKeyFile "/path/to/www.example.com.key"
+    </VirtualHost>
+
 
 Auki purettuna SSL:n käyttöönotto Apache-palvelimessa vaatii vähintään nämä vaatimukset:
 
@@ -37,7 +38,7 @@ Auki purettuna SSL:n käyttöönotto Apache-palvelimessa vaatii vähintään nä
 - Portin 443 (HTTPS) kuuntelu
 - Virtuaalipalvelimen määrittely, jossa otetaan SSL käyttöön ja annetaan polut varmenteelle ja yksityiselle avaimelle
 
-Muut pääkohdat
+**Muut pääkohdat**
 
 - Palvelin voidaan konfiguroida käyttämään vain vahvoja salausmenetelmiä määrittelemällä sopiva salausprofiili (SSLCipherSuite) ja asettamalla palvelin noudattamaan  määriteltyä järjestystä (SSLHonorCipherOrder)
       
@@ -118,9 +119,37 @@ Viimeinen vaihe on se, että avatessani selaimessa oman nettisivuni (joka on yhd
 
 # b) A-rating. Testaa oma sivusi TLS jollain yleisellä laadunvarmistustyökalulla, esim. SSLLabs (Käytä vain tavanomaisia tarkistustyökaluja, ei tunkeutumistestausta eikä siihen liittyviä työkaluja)
 
+Menin osoitteeseen https://www.ssllabs.com/ssltest/ ja syötin sivun Hostname-kenttään oman domainnimeni 'samulitoropainen.com'. Laitoin täpän ruutuun kohdassa "Do not show the results on the boards", koska en ole varma voiko domainnimeni näkymisellä tuollaisessa paikassa olla haitallisia vaikutuksia. Painoin "Submit" ja jäin seuraamaan analyysin edistymistä.
 
 
+<img width="1115" height="377" alt="image" src="https://github.com/user-attachments/assets/b769fd66-1b6e-47f8-b1b6-83f15b918904" />
 
+
+**Analyysi käynnissä:**
+
+
+<img width="1104" height="244" alt="image" src="https://github.com/user-attachments/assets/c32845c8-1c55-4a10-8270-cb0fcb435d1b" />
+
+
+**Yhteenveto**
+
+
+<img width="1104" height="612" alt="image" src="https://github.com/user-attachments/assets/a4f0688f-b3f8-4ebe-b233-44f2dfd5950d" />
+
+
+**Sertifikaatin tiedot**
+
+
+<img width="994" height="681" alt="image" src="https://github.com/user-attachments/assets/2678f37d-32f7-4b22-b005-4ffa4cdf5bfb" />
+
+
+<img width="996" height="470" alt="image" src="https://github.com/user-attachments/assets/de925810-d680-4377-b66c-8800ab8cd977" />
+
+
+**...ja kenties koko tehtävän pihvi tulee tässä:**
+
+
+<img width="997" height="296" alt="image" src="https://github.com/user-attachments/assets/eda9fbb2-0994-47dc-ad7e-47022972fbc7" />
 
 
 # c) Vapaaehtoinen: Tee weppilomake, jossa on käyttäjätunnus ja salasana. Käytä salaamatonta http-yhteyttä. Sieppaa liikennettä (esim. Wireshark, ngrep). Mitä havaitset? Mitä vaikutuksia tällä on tietoturvaan?
