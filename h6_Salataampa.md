@@ -252,7 +252,7 @@ Valitettavasti tässä kohtaa en ehtinyt tehdä enempää vianmääritystä täm
 
 - **Karvinen, T.** Linux-palvelimet. h6 Salataampa. Luettavissa: https://terokarvinen.com/linux-palvelimet/. Luettu: 27.9.2025.
 - **Let's Encrypt**. How it works. Luettavissa: https://letsencrypt.org/how-it-works/. Luettu: 27.9.2025.
-- **Req Bin**. HTTP POST Request Method. Luettavissa: https://reqbin.com/Article/HttpPost/. Luettu: 27.9.2025.
+- **Req Bin**. What is HTTP POST Request Method?. Luettavissa: https://reqbin.com/Article/HttpPost. Luettu: 27.9.2025.
 - **SSL Labs**. SSL Test. Luettavissa: https://www.ssllabs.com/ssltest/. Luettu: 27.9.2025.
 
 Lisäksi käytetty ongelmanratkaisun tukena ChatGPT:tä ja Copilotia.
