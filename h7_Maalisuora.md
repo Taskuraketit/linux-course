@@ -76,8 +76,34 @@ Tämän jälkeen suoritin ohjelman ja totesin sen toimivaksi. Tässäkään ei t
 
 # b) Lähdeviitteet. Tarkista ja tarvittaessa lisää lähdeviitteet kaikkiin raportteihisi h1 alkaen. Tarkista, että olet viitannut lähteisiin: tehtäväsivuun, kurssiin, muiden opiskelijoiden raportteihin, man-sivuihin, kotisivuihin ja ylipäänsä kaikkiin käyttämiisi lähteisiin. Lähdeviite tulee olla jokaisessa raportissa tai sivussa, jossa lähdettä on käytetty. Kaikki tehtävät perustuvat tämän sivun tehtävänantoihin, joten ainakin tämä viite on syytä löytyä. (Tästä alakohdasta ei tarvitse kirjoittaa vaiheittaista raporttia)
 
+Lähdeviitteet tarkistettu ja puutteet korjattu.
 
 # c) Laita Linuxiin uusi, itse tekemäsi komento niin, että kaikki käyttäjät voivat ajaa sitä.
 
+Loin ensin tiedoston 'laskuri.sh' sijaintiin /usr/local/bin/
+
+> $ sudo micro /usr/local/bin/laskuri.sh
+
+<img width="582" height="76" alt="image" src="https://github.com/user-attachments/assets/19ee064a-43ff-4a63-8425-5a6dd59bd378" />
+
+Tiedoston sisältö (tallennus luonnin jälkeen):
+
+<img width="307" height="178" alt="image" src="https://github.com/user-attachments/assets/c732c597-7a81-4ff6-86f8-8c6aee4c97b3" />
+
+Suoritusoikeuksien lisääminen kaikille käyttäjille (a = all)
+
+> $ sudo chmod a+x /usr/local/bin/laskuri.sh
+
+<img width="627" height="149" alt="image" src="https://github.com/user-attachments/assets/36594c88-d70c-4053-8636-4ebb101772d1" />
+
+Tiedoston suorittaminen:
+
+> $ laskuri.sh
+
+<img width="702" height="230" alt="image" src="https://github.com/user-attachments/assets/9d0f82c5-03f0-4267-9229-6a623f0bca22" />
+
+...ja sehän toimi kuin junan vessa :)
 
 # d) Ratkaise vanha arvioitava laboratorioharjoitus soveltuvin osin.
+
+
