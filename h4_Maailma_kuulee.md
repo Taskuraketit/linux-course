@@ -431,7 +431,9 @@ Sen sijaan IP-osoitteen syöttämällä sivu tulee näkymään...
 
 # Lähteet
 
-**Heinonen, J. 2025.** linux-03092025.md. Luettavissa: https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-03092025.md. Luettu: 12.9.2025
+**Heinonen, J. 2025.** Apache2. Luettavissa: https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-03092025.md. Luettu: 12.9.2025
+
+**Karvinen, T.** s.a. Linux Palvelimet alkusyksy 2025. Luettavissa: https://terokarvinen.com/linux-palvelimet/. Luettu: 11.9.2025.
 
 **Karvinen, T. 2017.** First Steps on a New Virtual Private Server – an Example on DigitalOcean and Ubuntu 16.04 LTS. Luettavissa: https://terokarvinen.com/2017/first-steps-on-a-new-virtual-private-server-an-example-on-digitalocean/. Luettu: 11.9.2025
 
