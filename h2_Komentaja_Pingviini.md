@@ -218,15 +218,14 @@ Virtuaalikone käyttää niitä resursseja, jotka sille on Virtualboxissa annett
 
 
 # Lähteet:
-- Karvinen, T. 2020. Command line basics revisited. Luettavissa: https://terokarvinen.com/2020/command-line-basics-revisited/. Luettu: 1.9.2025.
-- Linux.fi. Grep. Luettavissa: https://www.linux.fi/wiki/Grep. Luettu: 1.9.2025.
-- Linux.fi. Putki. Luettavissa: https://www.linux.fi/wiki/Putki. Luettu: 1.9.2025.
-- Quora. How do Install 2 programs simultaneously in Linux? Luettavissa: https://www.quora.com/How-do-I-install-2-programs-simultaneously-in-Linux. Luettu: 1.9.2025.
+- **Karvinen, T.** 2020. Command line basics revisited. Luettavissa: https://terokarvinen.com/2020/command-line-basics-revisited/. Luettu: 1.9.2025.
+- **Linux.fi.** s.a. Grep. Luettavissa: https://www.linux.fi/wiki/Grep. Luettu: 1.9.2025.
+- **Linux.fi.** s.a. Putki. Luettavissa: https://www.linux.fi/wiki/Putki. Luettu: 1.9.2025.
+- **Quora**. How do Install 2 programs simultaneously in Linux? Luettavissa: https://www.quora.com/How-do-I-install-2-programs-simultaneously-in-Linux. Luettu: 1.9.2025.
 
 
+Seuraavat tehtävät teen mahdollisesti myöhemmin:
 
-
-Seuraavat tehtävät jätän myöhemmäksi... :)
 
 ## g) Vapaaehtoinen: Valitse muutama rivi lokeista. Tulkitse ja analysoi.
 ## h) Vapaaehtoinen: Asenna jokin plugin micro-editorille ja kokeile sitä. Vaikkapa palettero, cheat tai runit.
