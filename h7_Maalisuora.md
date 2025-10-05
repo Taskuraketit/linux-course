@@ -106,4 +106,129 @@ Tiedoston suorittaminen:
 
 # d) Ratkaise vanha arvioitava laboratorioharjoitus soveltuvin osin.
 
+**Tätä tehtävää varten valitsin soveltuvin osin tehtäväksi vanhan laboratorioharjoituksen 'Arvioitava laboratorioharjoitus – Linux palvelimet ict4tn021-7 tiistai – alkukevät 2018 – 5 op'. Tein tehtäväkokonaisuuden Linux-virtuaalikoneellani (en palvelimella).**
+
+  \## Työntekijät
+  
+  *Työntekijöitämme ovat Joe Doe, Jorma Mähkylä, Pekka Hurme, Ronaldo Smith,Håkan Petersson ja Einari Mikkonen. Laita einarin käyttäjätunnukseksi "einari". Tee kullekin käyttäjälle esimerkkikotisivu.*
+
+Yksinkertaistuksen vuoksi loin vain Einarin ja tarkistin, että hänelle muodostui oma kotihakemisto.
+
+> $ sudo adduser einari
+>
+> ls -ld /home/einari
+>
+> grep einari /etc/passwd
+
+<img width="658" height="379" alt="image" src="https://github.com/user-attachments/assets/7847d9a0-be93-4c22-a7af-52f31d866d5d" />
+
+Seuraavaksi loin Einarille esimerkkisivut. Aloitin tämän userdir-moduulin aktivoinnilla
+
+> $ sudo a2enmod userdir
+>
+> $ sudo systemctl restart apache2
+
+<img width="802" height="222" alt="image" src="https://github.com/user-attachments/assets/9bf32b65-4e87-49b0-9bc2-f5d9dc6454d1" />
+
+Loin Einarille public_html-kansion
+
+> $ sudo -u einari mkdir /home/einari/public_html
+
+Seuraavaksi loin varsinaisen nettisivun Einarille
+
+<img width="1244" height="63" alt="image" src="https://github.com/user-attachments/assets/957b652e-26aa-442c-9e91-97a0e6baae89" />
+
+Seuraavaksi muokkasin kansion oikeuksia
+
+> $ sudo chmod -R 755 /home/einari/public_html
+
+<img width="659" height="39" alt="image" src="https://github.com/user-attachments/assets/c764a735-7965-49c5-afd2-5dfd106656d5" />
+
+
+Tässä 
+- -R tekee muutoksen rekursiivisesti eli kaikille alihakemistoille ja tiedostoille kyseisessä hakemistossa
+- 755 antaa omistajalle (einari) oikeudet: luku (r), kirjoitus (w), suoritus (x) ja ryhmälle sekä muille käyttäjille: luku (r), suoritus (x)
+
+
+Tarkistin vielä tiedoston sisällön ja siistin tekstin rivitystä, minkä jälkeen käynnistin apache2:n uudelleen.
+
+> $ micro index.html
+>
+> $ sudo systemctl restart apache2
+
+<img width="382" height="199" alt="image" src="https://github.com/user-attachments/assets/083cc031-104a-4198-ba92-aaddd698d37b" />
+
+<img width="756" height="136" alt="image" src="https://github.com/user-attachments/assets/1e16cc91-aabf-49e0-8113-be68063bf508" />
+
+Tämän jälkeen nettisivu näkyi oikein localhostilla:
+
+<img width="562" height="188" alt="image" src="https://github.com/user-attachments/assets/30de3a6d-3b47-46f9-97d2-f05285b3cc3c" />
+
+ 
+  *\## LAMP*
+  
+  *Asenna LAMP - Linux, Apache, MySQL, PHP. Tee einarin kotihakemistoon esimerkkisovellus, joka näyttää tietueita tietokannasta.*
+
+  Tätä ei käyty kurssilla läpi joten jätin tämän kohdan väliin.
+  
+  \## invis.example.com
+  
+  Laita Einarin esimerkkisovellus näkymään osoitteesta http://invis.example.com. Voit simuloida nimipalvelun toimintaa hosts-tiedoston avulla.
+
+  Tätä ei käyty kurssilla läpi joten jätin tämän kohdan väliin.
+  
+  \## mitakello
+  
+  *Tee uusi komento 'mitakello', joka tulostaa kellonajan. Komennon tulee toimia kaikilla käyttäjillä, kaikista hakemistoista pelkällä nimellä kutsuttuna.*
+
+Skriptin luonti:
+
+  > $ sudo micro /usr/local/bin/mitakello
+
+Skriptin sisältö:
+
+<img width="313" height="121" alt="image" src="https://github.com/user-attachments/assets/23db5b27-197a-4823-adcc-9c46f1d279f5" />
+
+Suoritusoikeuksien säätö:
+
+> $ sudo chmod a+x /usr/local/bin/mitakello
+
+Skriptin testaus:
+
+> $ mitakello
+
+<img width="617" height="82" alt="image" src="https://github.com/user-attachments/assets/f01d6475-86d8-4b0d-852b-8c75ad893c2a" />
+
+
+
+
+  \## Metapaketti
+  
+  Tee meille metapaketti, joka asentaa ohjelmat: git, httpie, curl, mitmproxy.
+  
+  Kuulemma "karvinen equivs" hakusanalla saattaisi löytyä ohjeita. Liitä metapaketin lähdekoodi palautettavan lab.txt:n loppuun. 
+  
+  \## unikarhu.example.com
+  
+  Laita staattinen html5-esimerkkisivu näkyviin osoitteeseen http://unikarhu.example.com. Voit simuloida nimipalvelun toimintaa hosts-tiedoston avulla.
+  
+  \## bonuskuorma
+  
+  Mittaa koneesi kuormitusta työkalulla, joka kerää kuormitustietoja yli ajan
+  
+  (ei pelkästään yhdellä hetkellä). Kuormita konetta haluamallasi tavalla, ja etsi kuormitustieto työkalusi keräämästä historiasta.
+  
+  \## Metapaketin uusi nimi
+  
+  Muuta metapaketin nimeksi xoy-tools. Asenna se.
+
+
+
+# Lähteet
+
+**Heinonen, J. s.a.** Linux Shell Scripting Basics. Luettavissa: https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-01102025.md. Luettu: 1.10.2025.
+
+**Karvinen, T. s.a.** Linux Palvelimet 2025 alkusyksy. Luettavissa: https://terokarvinen.com/linux-palvelimet/. Luettu: 1.10.2025.
+
+**Karvinen, T. 13.3.2018.** Arvioitava laboratorioharjoitus – Linux palvelimet ict4tn021-7 tiistai – alkukevät 2018 – 5 op. Luettavissa: https://terokarvinen.com/2018/arvioitava-laboratorioharjoitus-linux-palvelimet-ict4tn021-7-tiistai-alkukevat-2018-5-op/. Luettu: 5.10.2025.
 
