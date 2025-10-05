@@ -195,7 +195,9 @@ Näillä komennoilla voi nopeasti tarkistaa, toimiiko palvelin, mikä statuskood
 
 
 # Lähteet
-- The Apache Software Foundation 2023. Apache HTTP Server Version 2.4 Documentation: Name-based Virtual Host Support. Luettavissa: https://httpd.apache.org/docs/2.4/vhosts/name-based.html. Luettu: 8.9.2025.
-- Karvinen, T. 2018. Name Based Virtual Hosts on Apache – Multiple Websites to Single IP Address. Luettavissa: https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/. Luettu: 8.9.2025.
+
+- **Karvinen, T.** s.a. Linux Palvelimet alkusyksy 2025. Luettavissa: https://terokarvinen.com/linux-palvelimet/. Luettu: 8.9.2025.
+- **The Apache Software Foundation 2023***. Apache HTTP Server Version 2.4 Documentation: Name-based Virtual Host Support. Luettavissa: https://httpd.apache.org/docs/2.4/vhosts/name-based.html. Luettu: 8.9.2025.
+- **Karvinen, T.** 2018. Name Based Virtual Hosts on Apache – Multiple Websites to Single IP Address. Luettavissa: https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/. Luettu: 8.9.2025.
 
 Lisäksi käytetty ChatGPT:tä ongelmanselvityksen tukena sekä selittämään eri komentojen sisältöjä.
