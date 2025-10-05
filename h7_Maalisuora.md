@@ -1,6 +1,6 @@
 # a) Kirjoita ja aja "Hei maailma" kolmella kielellä.
 
-## Linux Shell script
+## 1) Linux Shell script
 
 Ensin loin Microlla tiedoston helloworld.sh
 
@@ -8,7 +8,7 @@ Ensin loin Microlla tiedoston helloworld.sh
 
 <img width="403" height="70" alt="image" src="https://github.com/user-attachments/assets/3519578a-2369-4ad7-8c1e-460335c09380" />
 
-Luotuani skriptiin sisältöä (alla) tallensin tiedoston.
+Lisättyäni skriptiin sisältöä tallensin tiedoston.
 
 <img width="322" height="156" alt="image" src="https://github.com/user-attachments/assets/b7b855b5-739d-4c0d-aacd-d09b5b520737" />
 
@@ -24,7 +24,7 @@ Seuraavaksi ajoin ohjelman ja totesin skriptin toimivaksi
 
 <img width="403" height="90" alt="image" src="https://github.com/user-attachments/assets/cfe98b78-4140-4f55-982d-36586ccf4541" />
 
-## Python
+## 2) Python
 
 Loin Microlla tiedoston helloworld.py
 
@@ -43,15 +43,17 @@ Suoritin tiedoston ja totesin sen toimivaksi ilman erillisiä oikeusmäärittely
 <img width="428" height="149" alt="image" src="https://github.com/user-attachments/assets/0955482b-e56d-4a82-a084-ce47fa7d907e" />
 
 
-## C++
+## 3) C++
 
-C++:aa varten päivitin ensin asennuspaketit ja asensin ohjeen mukaisesti tiedoston build-essential
+C++:aa varten päivitin ensin asennuspaketit ja asensin ohjeen mukaisesti tiedoston build-essential-ohjelmiston.
 
 > $ sudo apt-get update
 >
 > $ sudo apt-get install -y build-essential
 
 <img width="814" height="377" alt="image" src="https://github.com/user-attachments/assets/0d595333-6f65-4c5b-b90d-adaaf2080f1d" />
+
+Tulosteesta huomasin, että olinkin jo asentanut sen aiemmin.
 
 Seuraavaksi loin Microlla tiedoston helloworld.cpp
 
@@ -65,7 +67,7 @@ Seuraavaksi käänsin lähdekoodin suoritettavaksi ohjelmaksi käyttäen GNU C++
 
 > $ g++ helloworld.cpp -o helloworld
 
-Tämän jälkeen suoritin ohjelman ja totesin sen toimivaksi:
+Tämän jälkeen suoritin ohjelman ja totesin sen toimivaksi. Tässäkään ei tarvittu erillisiä oikeusmäärittelyjä.
 
 > $ ./helloworld
 
