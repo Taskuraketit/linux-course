@@ -4,11 +4,11 @@
 Raportin kirjoittaminen -> linkki: https://terokarvinen.com/2006/raportin-kirjoittaminen-4/
 
 Raportin kirjoittamisessa tulee huomioida useita seikkoja, mutta pelkällä kaupunkilaisjärjelläkin pääsee jo pitkälle. Oleellisimpia elementtejä raportissa ovat...
-1) Täsmällisyys: raportista tulee käydä selkeästi ilmi mitä on tehty ja missä järjestyksessä ja minkälaisin lopputuloksin. 
+1) **Täsmällisyys**: raportista tulee käydä selkeästi ilmi mitä on tehty ja missä järjestyksessä ja minkälaisin lopputuloksin. 
   Havainnollisuutta voi lisätä liittämällä raporttiin kuvakaappauksia esimerkiksi prompteista, virheilmoituksista jne.
-2) Toistettavuus: jos toinen henkilö toistaa raportilla kuvaillut asiat samalla tavalla ja samanlaisessa ympäristössä, lopputuloksenkin _pitäisi_ olla sama.
+2) **Toistettavuus**: jos toinen henkilö toistaa raportilla kuvaillut asiat samalla tavalla ja samanlaisessa ympäristössä, lopputuloksenkin _pitäisi_ olla sama.
    Ympäristö voi vaikuttaa oleellisesti lopputulokseen.
-3) Helppolukuisuus: raportin luettavuutta voi helpottaa mm. selkeillä kappalejaoilla, väliotsikoilla ja oikeakielisyydellä. Pitkän raportin tapauksessa on hyvä
+3) **Helppolukuisuus**: raportin luettavuutta voi helpottaa mm. selkeillä kappalejaoilla, väliotsikoilla ja oikeakielisyydellä. Pitkän raportin tapauksessa on hyvä
    lisätä tekstin alkuun selkeä tiivistelmä raportin sisällöstä.
 
 Lisäksi on hyvä muistaa muutamia yleissääntöjä: muista asianmukaiset lähdeviittaukset, käytä tarvittaessa vakiotekstejä (dokumentin kopiointi lisenssin mukaisesti, mitä nettisivua raportin, tehtävän tms. pohjana on käytetty jne.) ja vältä plagiointia sekä sepittämistä.
@@ -157,4 +157,10 @@ sudo apt-get upgrade
 
 Tämän jälkeen päivitykset rullasivat läpi.
 
+# Lähteet:
 
+**Heinonen, J.** s.a. How to Install Linux to Virtualbox? Luettavissa: https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-20082025.md. Luettu: 20.8.2025.
+
+**Karvinen, T.** s.a. Linux Palvelimet 2025 alkusyksy. Luettavissa: https://terokarvinen.com/linux-palvelimet/. Luettu: 20.8.2025.
+
+**Karvinen, T.** 4.6.2006. Raportin kirjoittaminen. Luettavissa: https://terokarvinen.com/2006/raportin-kirjoittaminen-4/. Luettu: 22.8.2025.
