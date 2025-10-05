@@ -342,7 +342,7 @@ Graaginen näkymä:
 
 > $ sudo apt-get install -y atop
 >
-> atop
+> $ atop
 
 <img width="1248" height="398" alt="image" src="https://github.com/user-attachments/assets/330beb25-cdbb-4709-9499-c495f4fd2998" />
 
@@ -350,17 +350,72 @@ Graaginen näkymä:
 <img width="1266" height="722" alt="image" src="https://github.com/user-attachments/assets/684c1148-7089-4245-bae3-d66d7b93d9f8" />
 
 
-
-  
+ 
   \## Metapaketin uusi nimi
   
-  Muuta metapaketin nimeksi xoy-tools. Asenna se.
+  *Muuta metapaketin nimeksi xoy-tools. Asenna se.*
 
+  Tätäkään ei käyty kurssilla läpi, mutta halusin kokeilla tätä Microsoft Copilotin ohjeistuksella.
 
+  Ensin siirryin metapaketin hakemistoon
+
+> $ cd ~/metapaketti/DEBIAN
+
+ <img width="498" height="59" alt="image" src="https://github.com/user-attachments/assets/f05841ba-097e-470b-81e6-17ab80883aa9" />
+
+Seuraavaksi avasin control-tiedoston muokatakseni sitä
+
+> $ micro control
+
+<img width="569" height="42" alt="image" src="https://github.com/user-attachments/assets/e8d78ae3-5ebd-41aa-ba24-84ed30872d17" />
+
+Muutin kohdan 'Package: metapaketti' -> 'Package: xoy-tools' ja tallensin tiedoston.
+
+<img width="825" height="241" alt="image" src="https://github.com/user-attachments/assets/0418c43a-fbe6-4e35-8453-9d33d6854244" />
+
+Paketin uudelleen rakennus:
+
+> $ cd ~
+>
+> $ dpkg-deb --build metapaketti xoy-tools.deb
+
+<img width="1285" height="153" alt="image" src="https://github.com/user-attachments/assets/dbe09d46-4d65-4921-b480-bd811f68bc45" />
+
+Paketin asennus:
+
+> $ sudo apt install ./xoy-tools.deb
+
+<img width="844" height="372" alt="image" src="https://github.com/user-attachments/assets/57c81683-3662-4452-814c-f0ac83122db5" />
+
+Virheilmoitusten vuoksi kokeilin asennusta dpkg:lla
+
+> $ sudo dpkg -i xoy-tools.deb
+>
+> $ sudo apt-get install -f
+
+<img width="739" height="556" alt="image" src="https://github.com/user-attachments/assets/a23b0908-65c2-415c-bd26-449edd3ecd65" />
+
+Testaus:
+
+> $ git --version
+>
+> $ http --version
+>
+> $ curl --version
+>
+> $ mitmproxy --version
+
+<img width="1269" height="297" alt="image" src="https://github.com/user-attachments/assets/ecbc69db-b011-4458-adbd-520721690bec" />
+
+Tällä kertaa sain samat virheilmoitukset (command not found) httpie:n ja mitmproxy:n osalta, mutta koska tätä metapakettiasiaa ei käyty läpi kurssilla, en katsonut tarpeelliseksi alkaa tekemään tälle varsinaista vianmääritystä vaan tyydyin siihen, ettänyt ymmärrän jollain tasolla metapakettien muodostamisen perustan.
 
 # Lähteet
 
+**Heinonen, J. s.a.** Apache2. Luettavissa: https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-03092025.md. Luettu: 5.10.2025.
+
 **Heinonen, J. s.a.** Linux Shell Scripting Basics. Luettavissa: https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-01102025.md. Luettu: 1.10.2025.
+
+**Karvinen, T. 12.2.2012.** Short HTML5 page. Luettavissa: https://terokarvinen.com/2012/short-html5-page/. Luettu: 5.10.2025.
 
 **Karvinen, T. s.a.** Linux Palvelimet 2025 alkusyksy. Luettavissa: https://terokarvinen.com/linux-palvelimet/. Luettu: 1.10.2025.
 
