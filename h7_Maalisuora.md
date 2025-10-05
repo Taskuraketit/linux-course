@@ -407,7 +407,7 @@ Testaus:
 
 <img width="1269" height="297" alt="image" src="https://github.com/user-attachments/assets/ecbc69db-b011-4458-adbd-520721690bec" />
 
-Tällä kertaa sain samat virheilmoitukset (command not found) httpie:n ja mitmproxy:n osalta, mutta koska tätä metapakettiasiaa ei käyty läpi kurssilla, en katsonut tarpeelliseksi alkaa tekemään tälle varsinaista vianmääritystä vaan tyydyin siihen, ettänyt ymmärrän jollain tasolla metapakettien muodostamisen perustan.
+Tällä kertaa sain samat virheilmoitukset (command not found) httpie:n ja mitmproxy:n osalta, mutta koska tätä metapakettiasiaa ei käyty läpi kurssilla, en katsonut tarpeelliseksi alkaa tekemään tälle varsinaista vianmääritystä vaan tyydyin siihen, että nyt ymmärrän jollain tasolla metapakettien muodostamisen perustan.
 
 # Lähteet
 
