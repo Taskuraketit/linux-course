@@ -173,9 +173,9 @@ Tämän jälkeen nettisivu näkyi oikein localhostilla:
   
   \## invis.example.com
   
-  Laita Einarin esimerkkisovellus näkymään osoitteesta http://invis.example.com. Voit simuloida nimipalvelun toimintaa hosts-tiedoston avulla.
+  *Laita Einarin esimerkkisovellus näkymään osoitteesta http://invis.example.com. Voit simuloida nimipalvelun toimintaa hosts-tiedoston avulla.*
 
-  Tätä ei käyty kurssilla läpi joten jätin tämän kohdan väliin.
+  Edelliseen kohtaan viitaten tätä ei käyty kurssilla läpi joten jätin tämän kohdan väliin.
   
   \## mitakello
   
@@ -200,23 +200,157 @@ Skriptin testaus:
 <img width="617" height="82" alt="image" src="https://github.com/user-attachments/assets/f01d6475-86d8-4b0d-852b-8c75ad893c2a" />
 
 
-
-
   \## Metapaketti
   
-  Tee meille metapaketti, joka asentaa ohjelmat: git, httpie, curl, mitmproxy.
+  *Tee meille metapaketti, joka asentaa ohjelmat: git, httpie, curl, mitmproxy. Kuulemma "karvinen equivs" hakusanalla saattaisi löytyä ohjeita. Liitä metapaketin lähdekoodi palautettavan lab.txt:n loppuun.*
+
+  Tätä ei ole käsitelty kurssilla, mutta koska aihe kuulostaa kiinnostavalta, päätin kokeilla tätä (Microsoft Copilotin ohjeistuksella).
+
+  **Vaiheet:**
+
+  Hakemiston luonti metapakettia varten
+
+  > $ mkdir -p ~/metapaketti/DEBIAN
+
+<img width="526" height="64" alt="image" src="https://github.com/user-attachments/assets/f4c6d585-457d-43f9-86c6-4efb343b1203" />
   
-  Kuulemma "karvinen equivs" hakusanalla saattaisi löytyä ohjeita. Liitä metapaketin lähdekoodi palautettavan lab.txt:n loppuun. 
+  Control-tiedoston luonti (määrittää paketin nimen, version ja riippuvuudet)
+
+  > sudo micro control
+
+<img width="627" height="107" alt="image" src="https://github.com/user-attachments/assets/e250aeb6-6c94-49f8-bf7f-0334853b245f" />
+
+Tiedoston sisältö (tallennus lopuksi):
+
+<img width="849" height="235" alt="image" src="https://github.com/user-attachments/assets/7fae8e32-3f2a-417d-a904-500b845ff7f9" />
+
+Paketin rakentaminen
+
+> $ cd ~
+>
+> $ dpkg-deb --build metapaketti
+
+<img width="1266" height="148" alt="image" src="https://github.com/user-attachments/assets/93a8a095-a00f-4825-8751-b381e9fd9da5" />
+
+Metapaketin asennus
+
+> $ sudo dpkg -i metapaketti.deb
+>
+> $ sudo apt-get install -f
+
+<img width="1278" height="801" alt="image" src="https://github.com/user-attachments/assets/e801445c-2b82-4309-a02a-8c7115ad354d" />
+
+Vastasin ilmoitukseen 'y' (='yes') ja paketti lähti asentumaan.
+
+Lopuksi testasin ovatko ohjelmat asentuneet:
+
+> $ git --version
+>
+> $ http --version
+>
+> $ curl --version
+>
+> $ mitmproxy --version
+
+<img width="1278" height="801" alt="image" src="https://github.com/user-attachments/assets/568b74cd-b92c-40c0-a8a1-5629d1919f39" />
+
+Ohjelmien httpie (komento http) ja mitmproxy kohdalla terminaali ilmoitti "command not found". Koska pakettien luontia ei käsitelty kurssilla, en katsonut aiheelliseksi tehdä varsinaista ongelmanselvitystä vaan päätin jättää tämän tähän. Sentään kaksi ohjelmaa neljästä asentui.
+
   
   \## unikarhu.example.com
   
-  Laita staattinen html5-esimerkkisivu näkyviin osoitteeseen http://unikarhu.example.com. Voit simuloida nimipalvelun toimintaa hosts-tiedoston avulla.
+  *Laita staattinen html5-esimerkkisivu näkyviin osoitteeseen http://unikarhu.example.com. Voit simuloida nimipalvelun toimintaa hosts-tiedoston avulla.*
+
+  Ensin nimesin uudelleen /var/www/html-kansiossa olevan index.html-tiedoston ja loin uuden index.html-tiedoston
+
+> $ cd /var/www/html
+>
+> $ sudo mv index.html hattu.index.html
+>
+> $ sudo micro /var/www/html/index.html
+
+Tiedoston sisältö:
+
+<img width="757" height="288" alt="image" src="https://github.com/user-attachments/assets/cf7f7dea-71cd-4de7-9504-a6aaa538dc32" />
+
+Uuden konfiguraation luonti:
+
+> $ sudo micro /etc/apache2/sites-available/unikarhu.conf
+
+<img width="1033" height="193" alt="image" src="https://github.com/user-attachments/assets/8a200120-4188-4e15-a891-6f5454c92b07" />
+
+Tiedoston sisältö (tallennus lopuksi):
+
+<img width="431" height="251" alt="image" src="https://github.com/user-attachments/assets/f8ef8153-cb43-4e05-a5d1-ad9676279cbb" />
+
+Sivuston käyttöönotto ja Apachen uudelleenkäynnistys
+
+> $ sudo a2ensite unikarhu.conf
+>
+> $ sudo systemctl reload apache2
+
+<img width="784" height="117" alt="image" src="https://github.com/user-attachments/assets/0a0f0ecf-9921-4a20-be31-c84483ce215f" />
+
+Hosts-tiedoston muokkaus (tallennus lopuksi):
+
+> $ sudo micro /etc/hosts
+
+<img width="726" height="21" alt="image" src="https://github.com/user-attachments/assets/c4f00fdb-4909-4128-a020-0464209a208b" />
+
+Tiedoston sisältö:
+
+<img width="409" height="90" alt="image" src="https://github.com/user-attachments/assets/c0efec1b-0b40-4782-8439-c1774e369d22" />
+
+Testaus selaimella:
+
+<img width="640" height="259" alt="image" src="https://github.com/user-attachments/assets/46d954c5-a2c0-4b16-b6c7-d5d211fe0045" />
+
   
   \## bonuskuorma
   
-  Mittaa koneesi kuormitusta työkalulla, joka kerää kuormitustietoja yli ajan
-  
-  (ei pelkästään yhdellä hetkellä). Kuormita konetta haluamallasi tavalla, ja etsi kuormitustieto työkalusi keräämästä historiasta.
+  *Mittaa koneesi kuormitusta työkalulla, joka kerää kuormitustietoja yli ajan (ei pelkästään yhdellä hetkellä). Kuormita konetta haluamallasi tavalla, ja etsi kuormitustieto työkalusi keräämästä historiasta.*
+
+  Tarvittavien pakettien asennus
+
+> $ sudo apt-get update
+>
+> $ sudo apt-get install -y sysstat stress
+
+<img width="956" height="559" alt="image" src="https://github.com/user-attachments/assets/45d6c224-d16c-4503-bf98-cd45c857c193" />
+
+Sysstat-palvelun aktivointi
+
+> $ sudo systemctl enable sysstat
+>
+> $ sudo systemctl start sysstat
+
+<img width="1104" height="98" alt="image" src="https://github.com/user-attachments/assets/ad21837e-3de5-494a-9461-d4b86af0c258" />
+
+Koneen kuormitus (kokeilin ensin 4 CPU-ytimellä 15 sekunnin ajan):
+
+> $ stress --cpu 4 --timeout 15
+
+<img width="680" height="87" alt="image" src="https://github.com/user-attachments/assets/6c895baf-669f-4324-a243-aeed64296be4" />
+
+Datan tarkistus lokeilta:
+
+> $ sar -q -f /var/log/sysstat/sa$(date +%d)
+
+<img width="832" height="650" alt="image" src="https://github.com/user-attachments/assets/f31485b0-3c0c-4239-9d7a-5bdb71bbea2a" />
+
+Graaginen näkymä:
+
+> $ sudo apt-get install -y atop
+>
+> atop
+
+<img width="1248" height="398" alt="image" src="https://github.com/user-attachments/assets/330beb25-cdbb-4709-9499-c495f4fd2998" />
+
+
+<img width="1266" height="722" alt="image" src="https://github.com/user-attachments/assets/684c1148-7089-4245-bae3-d66d7b93d9f8" />
+
+
+
   
   \## Metapaketin uusi nimi
   
