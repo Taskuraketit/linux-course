@@ -218,6 +218,7 @@ Virtuaalikone käyttää niitä resursseja, jotka sille on Virtualboxissa annett
 
 
 # Lähteet:
+- **Karvinen, T,** s.a. Linux Palvelimet alkusyksy 2025. Luettavissa: https://terokarvinen.com/linux-palvelimet/. Luettu: 1.9.2025.
 - **Karvinen, T.** 2020. Command line basics revisited. Luettavissa: https://terokarvinen.com/2020/command-line-basics-revisited/. Luettu: 1.9.2025.
 - **Linux.fi.** s.a. Grep. Luettavissa: https://www.linux.fi/wiki/Grep. Luettu: 1.9.2025.
 - **Linux.fi.** s.a. Putki. Luettavissa: https://www.linux.fi/wiki/Putki. Luettu: 1.9.2025.
